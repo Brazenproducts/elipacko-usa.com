@@ -105,6 +105,13 @@ h2{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;color:var(--navy);margin-b
 .ind-item p{font-size:.85rem;font-weight:600;color:var(--navy)}
 
 /* CONTACT */
+#videos{background:#fff}
+.video-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;margin-top:36px}
+.video-card{background:var(--gray);border-radius:12px;overflow:hidden;transition:transform .2s,box-shadow .2s}
+.video-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.1)}
+.video-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
+.video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+.video-card p{padding:12px 14px;font-size:.88rem;font-weight:600;color:var(--navy);margin:0}
 #contact{background:var(--white)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
 .contact-info h3{font-size:1.1rem;font-weight:700;margin-bottom:16px;color:var(--navy)}
@@ -149,6 +156,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:40px 5%}
       <li><a href="#industries">Industries</a></li>
       <li><a href="#why-us">Why Us</a></li>
       <li><a href="#sustainability">Sustainability</a></li>
+      <li><a href="#videos">Videos</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <a href="#contact" class="nav-cta">Request a Quote</a>
@@ -292,6 +300,49 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:40px 5%}
       <div class="ind-item"><div class="ind-icon">📦</div><p>E-Commerce Shipping</p></div>
       <div class="ind-item"><div class="ind-icon">🏠</div><p>Moving &amp; Storage</p></div>
       <div class="ind-item"><div class="ind-icon">🖼️</div><p>Graphic Arts &amp; Signage</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section id="videos">
+  <div class="section-inner">
+    <div class="section-label">See It In Action</div>
+    <h2>Factory Tours, Product Tests &amp; QC Videos</h2>
+    <p class="section-sub">Real footage from our production floor — compression tests, drop tests, printing machines, and more.</p>
+    <div class="video-grid">
+      <div class="video-card">
+        <div class="video-wrap"><iframe src="https://www.youtube.com/embed/NGktm6dXzgQ" title="Factory-Direct Polypropylene Solutions" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+        <p>Factory-Direct Overview</p>
+      </div>
+      <div class="video-card">
+        <div class="video-wrap"><iframe src="https://www.youtube.com/embed/2MnwWOd8-fM" title="Compression Test" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+        <p>Compression Test</p>
+      </div>
+      <div class="video-card">
+        <div class="video-wrap"><iframe src="https://www.youtube.com/embed/SIY-PF2xO_4" title="Drop Test" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+        <p>Drop Test</p>
+      </div>
+      <div class="video-card">
+        <div class="video-wrap"><iframe src="https://www.youtube.com/embed/Yc0g3c5allQ" title="Puncture Test" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+        <p>Puncture Test</p>
+      </div>
+      <div class="video-card">
+        <div class="video-wrap"><iframe src="https://www.youtube.com/embed/e4ysog-JUFk" title="Seafood Packaging Box Test" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+        <p>Seafood Packaging Test</p>
+      </div>
+      <div class="video-card">
+        <div class="video-wrap"><iframe src="https://www.youtube.com/embed/P9uBak6ZJQQ" title="Printing Machine Showcase" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+        <p>Printing Machine Showcase</p>
+      </div>
+      <div class="video-card">
+        <div class="video-wrap"><iframe src="https://www.youtube.com/embed/lcQ_j7OcwnQ" title="Custom Fruit Boxes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+        <p>Custom Fruit Boxes</p>
+      </div>
+      <div class="video-card">
+        <div class="video-wrap"><iframe src="https://www.youtube.com/embed/K8HTJpAJaLo" title="Vegetable Box" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+        <p>Vegetable Box</p>
+      </div>
     </div>
   </div>
 </section>
