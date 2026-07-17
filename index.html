@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elipacko USA | Corrugated Plastic Packaging Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#0a2540;--blue:#1a6bdb;--light-blue:#e8f0fe;--white:#ffffff;--gray:#f7f9fc;--text:#1a2332;--muted:#6b7a8d}
+body{font-family:'Inter',sans-serif;color:var(--text);line-height:1.6}
+a{text-decoration:none;color:inherit}
+img{max-width:100%}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid #e2e8f0;padding:0 5%}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;max-width:1200px;margin:0 auto}
+.nav-logo img{height:44px}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{font-size:.92rem;font-weight:500;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--blue)}
+.btn{display:inline-block;padding:10px 22px;border-radius:6px;font-weight:600;font-size:.9rem;cursor:pointer;transition:all .2s}
+.btn-primary{background:var(--blue);color:#fff;border:none}
+.btn-primary:hover{background:#1558c0}
+.btn-outline{border:2px solid var(--blue);color:var(--blue);background:transparent}
+.btn-outline:hover{background:var(--blue);color:#fff}
+.nav-cta{background:var(--navy);color:#fff;padding:9px 20px;border-radius:6px;font-size:.88rem;font-weight:600;transition:background .2s}
+.nav-cta:hover{background:var(--blue)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer}
+.hamburger span{width:24px;height:2px;background:var(--navy);border-radius:2px}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#0d3a6e 60%,#1a6bdb 100%);color:#fff;padding:90px 5% 80px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url('https://elipacko.com/wp-content/uploads/2025/10/01.webp') center/cover no-repeat;opacity:.1}
+.hero-inner{position:relative;max-width:800px;margin:0 auto}
+.usa-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:30px;padding:6px 18px;font-size:.85rem;font-weight:600;margin-bottom:28px;letter-spacing:.05em}
+.usa-badge .flag{font-size:1.1rem}
+h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;line-height:1.15;margin-bottom:20px}
+h1 span{color:#60a5fa}
+.hero p{font-size:1.1rem;color:rgba(255,255,255,.85);max-width:620px;margin:0 auto 36px}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.coming-soon-strip{margin-top:40px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:14px 24px;display:inline-block;font-size:.95rem}
+.coming-soon-strip strong{color:#fbbf24}
+
+/* TRUST BAR */
+.trust-bar{background:var(--navy);color:#fff;padding:20px 5%}
+.trust-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-around;flex-wrap:wrap;gap:16px}
+.trust-item{text-align:center}
+.trust-item .num{font-size:1.6rem;font-weight:800;color:#60a5fa}
+.trust-item .label{font-size:.78rem;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:.06em}
+
+/* SECTIONS */
+section{padding:80px 5%}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-label{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--blue);margin-bottom:10px}
+h2{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;color:var(--navy);margin-bottom:16px}
+.section-sub{font-size:1.05rem;color:var(--muted);max-width:600px;margin-bottom:48px}
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap(24px}
+.grid-4{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+
+/* PRODUCTS */
+#products{background:var(--gray)}
+.product-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);transition:transform .2s,box-shadow .2s}
+.product-card:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(0,0,0,.12)}
+.product-card img{width:100%;height:200px;object-fit:cover}
+.product-card-body{padding:18px}
+.product-card h3{font-size:1rem;font-weight:700;margin-bottom:6px;color:var(--navy)}
+.product-card p{font-size:.87rem;color:var(--muted)}
+
+/* WHY US */
+.why-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:28px;transition:border-color .2s,box-shadow .2s}
+.why-card:hover{border-color:var(--blue);box-shadow:0 4px 20px rgba(26,107,219,.1)}
+.why-icon{width:48px;height:48px;background:var(--light-blue);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:1.4rem}
+.why-card h3{font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--navy)}
+.why-card p{font-size:.87rem;color:var(--muted)}
+
+/* USA SECTION */
+.usa-section{background:linear-gradient(135deg,#0a2540,#1a3a6e);color:#fff;padding:80px 5%}
+.usa-section-inner{max-width:1000px;margin:0 auto;text-align:center}
+.usa-section h2{color:#fff}
+.usa-section .section-label{color:#60a5fa}
+.usa-flag-big{font-size:3rem;margin-bottom:16px}
+.usa-section p{color:rgba(255,255,255,.8);max-width:680px;margin:0 auto 20px}
+.status-badge{display:inline-block;background:#fbbf24;color:#1a2332;font-weight:700;font-size:.85rem;padding:6px 16px;border-radius:20px;margin-bottom:28px}
+.usa-points{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-top:36px}
+.usa-point{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:16px 22px;text-align:center;min-width:160px}
+.usa-point .usa-point-icon{font-size:1.5rem;margin-bottom:8px}
+.usa-point p{font-size:.85rem;color:rgba(255,255,255,.85);margin:0}
+
+/* SUSTAINABILITY */
+#sustainability{background:var(--gray)}
+.sustain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+.sustain-card{background:#fff;border-radius:12px;padding:28px;text-align:center;border:1px solid #e2e8f0}
+.sustain-card .s-icon{font-size:2.2rem;margin-bottom:14px}
+.sustain-card h3{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:8px}
+.sustain-card p{font-size:.85rem;color:var(--muted)}
+
+/* INDUSTRIES */
+.ind-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px}
+.ind-item{background:var(--gray);border-radius:10px;padding:20px 16px;text-align:center;border:1px solid #e2e8f0;transition:background .2s,border-color .2s}
+.ind-item:hover{background:var(--light-blue);border-color:var(--blue)}
+.ind-item .ind-icon{font-size:1.8rem;margin-bottom:10px}
+.ind-item p{font-size:.85rem;font-weight:600;color:var(--navy)}
+
+/* CONTACT */
+#contact{background:var(--white)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.contact-info h3{font-size:1.1rem;font-weight:700;margin-bottom:16px;color:var(--navy)}
+.contact-info p{color:var(--muted);font-size:.93rem;margin-bottom:24px}
+.contact-detail{display:flex;align-items:center;gap:10px;margin-bottom:12px;font-size:.9rem}
+.contact-detail .cd-icon{width:36px;height:36px;background:var(--light-blue);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+form{display:flex;flex-direction:column;gap:14px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+input,select,textarea{width:100%;padding:12px 14px;border:1px solid #d1d5db;border-radius:8px;font-family:inherit;font-size:.9rem;color:var(--text);transition:border-color .2s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(26,107,219,.1)}
+textarea{resize:vertical;min-height:110px}
+.form-submit{background:var(--blue);color:#fff;border:none;padding:13px;border-radius:8px;font-size:.95rem;font-weight:600;cursor:pointer;transition:background .2s}
+.form-submit:hover{background:#1558c0}
+
+/* FOOTER */
+footer{background:var(--navy);color:rgba(255,255,255,.7);padding:40px 5%}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.footer-logo img{height:36px;filter:brightness(10)}
+.footer-links{display:flex;gap:22px;flex-wrap:wrap}
+.footer-links a{font-size:.85rem;color:rgba(255,255,255,.6);transition:color .2s}
+.footer-links a:hover{color:#fff}
+.footer-copy{font-size:.82rem}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none}
+  .hamburger{display:flex}
+  .contact-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .footer-inner{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="#"><img src="https://elipacko.com/wp-content/uploads/2025/10/logo-main.png" alt="Elipacko USA"></a>
+    <ul class="nav-links">
+      <li><a href="#products">Products</a></li>
+      <li><a href="#industries">Industries</a></li>
+      <li><a href="#why-us">Why Us</a></li>
+      <li><a href="#sustainability">Sustainability</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Request a Quote</a>
+    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="usa-badge"><span class="flag">🇺🇸</span> USA-READY PACKAGING PARTNER</div>
+    <h1>Premium Corrugated Plastic Packaging — <span>Built for American Business</span></h1>
+    <p>Durable, sustainable PP corrugated boxes and sheets — tariff-free sourcing, 3-day production, door-to-door delivery to US ports.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn btn-primary">Request a Free Quote</a>
+      <a href="#products" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.5)">View Products</a>
+    </div>
+    <div class="coming-soon-strip">🏭 <strong>USA Manufacturing Coming Soon</strong> — Domestic production capacity currently in development</div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item"><div class="num">50,000+</div><div class="label">Tons Annual Output</div></div>
+    <div class="trust-item"><div class="num">400+</div><div class="label">Production Staff</div></div>
+    <div class="trust-item"><div class="num">15+</div><div class="label">Years Experience</div></div>
+    <div class="trust-item"><div class="num">0%</div><div class="label">Anti-Dumping Duty</div></div>
+    <div class="trust-item"><div class="num">3 Days</div><div class="label">1×40HQ Production</div></div>
+    <div class="trust-item"><div class="num">20+</div><div class="label">Production Lines</div></div>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="section-inner">
+    <div class="section-label">Our Products</div>
+    <h2>Corrugated Plastic Solutions for Every Industry</h2>
+    <p class="section-sub">Custom PP hollow sheet packaging engineered for agriculture, cold-chain, retail, and industrial applications.</p>
+    <div class="grid-2" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px">
+      <div class="product-card"><img src="https://elipacko.com/wp-content/uploads/2025/10/01.webp" alt="Agriculture Boxes"><div class="product-card-body"><h3>Agriculture Packaging</h3><p>Ventilated fruit &amp; vegetable boxes — lightweight, stackable, reusable.</p></div></div>
+      <div class="product-card"><img src="https://elipacko.com/wp-content/uploads/2025/10/03.webp" alt="Seafood Packaging"><div class="product-card-body"><h3>Seafood &amp; Cold-Chain</h3><p>Rated to −40°F. Ideal for live seafood, frozen proteins, and cold logistics.</p></div></div>
+      <div class="product-card"><img src="https://elipacko.com/wp-content/uploads/2025/10/05.webp" alt="Shipping Boxes"><div class="product-card-body"><h3>Shipping &amp; Mailer Boxes</h3><p>High-strength corrugated PP for e-commerce and industrial shipments.</p></div></div>
+      <div class="product-card"><img src="https://elipacko.com/wp-content/uploads/2025/10/07.webp" alt="Storage Boxes"><div class="product-card-body"><h3>Storage &amp; Moving Boxes</h3><p>Durable, reusable containers for warehousing and relocation.</p></div></div>
+      <div class="product-card"><img src="https://elipacko.com/wp-content/uploads/2025/10/09.webp" alt="Display Stands"><div class="product-card-body"><h3>Display &amp; POS Stands</h3><p>Retail-ready point-of-sale displays and graphic art boards.</p></div></div>
+      <div class="product-card"><img src="https://elipacko.com/wp-content/uploads/2025/10/11.webp" alt="Custom PP Sheets"><div class="product-card-body"><h3>Custom PP Corrugated Sheets</h3><p>2mm–12mm thickness, custom colors, ESD &amp; high corona treatment.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why-us">
+  <div class="section-inner">
+    <div class="section-label">Why Elipacko</div>
+    <h2>The Smarter Packaging Choice for US Buyers</h2>
+    <p class="section-sub">Competitive advantages that protect your supply chain and your bottom line.</p>
+    <div class="grid-2" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+      <div class="why-card">
+        <div class="why-icon">💰</div>
+        <h3>0% Anti-Dumping Duty</h3>
+        <p>Unlike Chinese suppliers facing 25%+ Section 301 tariffs, Elipacko products enter the US duty-free — saving you up to 25% on landed cost.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">⚡</div>
+        <h3>3-Day Production Speed</h3>
+        <p>We produce one full 40HQ container in just 3 days. Fastest lead times in the industry so you never run out of stock.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🚢</div>
+        <h3>Door-to-Door US Delivery</h3>
+        <p>Direct shipments to LA, New Jersey, and Savannah ports. Full logistics coordination included — no freight headaches.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">♻️</div>
+        <h3>100% Recyclable &amp; Sustainable</h3>
+        <p>Closed-loop recycling program with zero landfill. Meet your ESG targets with packaging that's fully circular.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🎨</div>
+        <h3>Free Design &amp; Prototyping</h3>
+        <p>Our engineering team provides complimentary CAD design, custom printing, and prototype samples before you commit to an order.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📹</div>
+        <h3>Real-Time Video QC</h3>
+        <p>Live factory floor access via video during production. Full transparency — see your order being made before it ships.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USA MANUFACTURING -->
+<section class="usa-section">
+  <div class="usa-section-inner">
+    <div class="section-label">Domestic Expansion</div>
+    <div class="usa-flag-big">🇺🇸</div>
+    <h2>USA Manufacturing — Coming Soon</h2>
+    <div class="status-badge">🏗️ In Development</div>
+    <p>Elipacko is actively developing domestic US manufacturing capacity to serve American customers with shorter lead times, Made-in-USA product options, and further supply chain resilience.</p>
+    <p>In the meantime, our Asian production facility — the largest of its kind — ships directly to US ports with <strong style="color:#fbbf24">0% anti-dumping duty and full Section 301 tariff exemptions</strong>, giving you the same cost advantage as domestic sourcing.</p>
+    <div class="usa-points">
+      <div class="usa-point"><div class="usa-point-icon">🏭</div><p>Domestic facility<br>in development</p></div>
+      <div class="usa-point"><div class="usa-point-icon">0%</div><p>Tariff-free imports<br>available now</p></div>
+      <div class="usa-point"><div class="usa-point-icon">🚢</div><p>LA · NJ · Savannah<br>direct delivery</p></div>
+      <div class="usa-point"><div class="usa-point-icon">📦</div><p>US-spec packaging<br>standards met</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SUSTAINABILITY -->
+<section id="sustainability">
+  <div class="section-inner">
+    <div class="section-label">Sustainability</div>
+    <h2>Packaging That's Good for Business &amp; the Planet</h2>
+    <p class="section-sub">Our closed-loop recycling system means every box we make can become another box — forever.</p>
+    <div class="sustain-grid">
+      <div class="sustain-card"><div class="s-icon">♻️</div><h3>Zero Landfill Policy</h3><p>100% of production waste and end-of-life product is reclaimed and recycled back into raw material.</p></div>
+      <div class="sustain-card"><div class="s-icon">🔄</div><h3>Closed-Loop Recycling</h3><p>Full circular economy model — we buy back used PP corrugated for reprocessing into new sheets.</p></div>
+      <div class="sustain-card"><div class="s-icon">🌱</div><h3>Reduced Carbon Footprint</h3><p>Lightweight PP packaging reduces shipping weight and fuel consumption vs. wood or cardboard alternatives.</p></div>
+      <div class="sustain-card"><div class="s-icon">🏆</div><h3>ESG Compliant</h3><p>Documented sustainability metrics available for your ESG reporting and supply chain audits.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section id="industries" style="background:#fff">
+  <div class="section-inner">
+    <div class="section-label">Industries Served</div>
+    <h2>Trusted Across Every Sector That Moves Product</h2>
+    <p class="section-sub" style="margin-bottom:36px">From farm to freezer to factory floor.</p>
+    <div class="ind-grid">
+      <div class="ind-item"><div class="ind-icon">🥦</div><p>Agriculture &amp; Produce</p></div>
+      <div class="ind-item"><div class="ind-icon">🐟</div><p>Seafood &amp; Aquaculture</p></div>
+      <div class="ind-item"><div class="ind-icon">❄️</div><p>Cold-Chain Logistics</p></div>
+      <div class="ind-item"><div class="ind-icon">🧊</div><p>Frozen Food</p></div>
+      <div class="ind-item"><div class="ind-icon">🛒</div><p>Retail &amp; POS Display</p></div>
+      <div class="ind-item"><div class="ind-icon">🏭</div><p>Industrial Dunnage</p></div>
+      <div class="ind-item"><div class="ind-icon">🚗</div><p>Automotive Packaging</p></div>
+      <div class="ind-item"><div class="ind-icon">🔌</div><p>Electronics Insulation</p></div>
+      <div class="ind-item"><div class="ind-icon">🌬️</div><p>HVAC Components</p></div>
+      <div class="ind-item"><div class="ind-icon">📦</div><p>E-Commerce Shipping</p></div>
+      <div class="ind-item"><div class="ind-icon">🏠</div><p>Moving &amp; Storage</p></div>
+      <div class="ind-item"><div class="ind-icon">🖼️</div><p>Graphic Arts &amp; Signage</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="background:var(--gray)">
+  <div class="section-inner">
+    <div class="section-label">Get in Touch</div>
+    <h2>Request a Quote or Sample</h2>
+    <p class="section-sub">Our US sales team responds within one business day.</p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Ready to source smarter?</h3>
+        <p>Fill out the form and we'll prepare a custom quote based on your volume, spec, and delivery requirements — typically within 24 hours.</p>
+        <div class="contact-detail"><div class="cd-icon">✉️</div><a href="mailto:info@elipacko.com">info@elipacko.com</a></div>
+        <div class="contact-detail"><div class="cd-icon">🚢</div><span>Delivery to: LA · New Jersey · Savannah</span></div>
+        <div class="contact-detail"><div class="cd-icon">⚡</div><span>Quotes returned within 24 hours</span></div>
+        <div class="contact-detail"><div class="cd-icon">🎨</div><span>Free design &amp; prototype service included</span></div>
+        <br>
+        <div style="background:var(--light-blue);border-radius:10px;padding:20px">
+          <div style="font-weight:700;color:var(--navy);margin-bottom:8px">🇺🇸 USA Manufacturing Coming Soon</div>
+          <div style="font-size:.87rem;color:var(--muted)">Domestic production capacity in development. Currently shipping tariff-free from our Asia facility direct to US ports.</div>
+        </div>
+      </div>
+      <form action="mailto:info@elipacko.com" method="POST" enctype="text/plain">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="text" name="company" placeholder="Company Name">
+        </div>
+        <input type="email" name="email" placeholder="Business Email" required>
+        <select name="product">
+          <option value="">Product Interest</option>
+          <option>Agriculture / Produce Boxes</option>
+          <option>Seafood &amp; Cold-Chain Packaging</option>
+          <option>Frozen Food Packaging</option>
+          <option>Shipping &amp; Mailer Boxes</option>
+          <option>Storage &amp; Moving Boxes</option>
+          <option>Retail Display &amp; POS Stands</option>
+          <option>Custom PP Corrugated Sheets</option>
+          <option>Other / Custom</option>
+        </select>
+        <input type="text" name="volume" placeholder="Estimated Monthly Volume (optional)">
+        <textarea name="message" placeholder="Tell us about your requirements — dimensions, thickness, quantity, delivery port..."></textarea>
+        <button type="submit" class="form-submit">Send Quote Request →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <a href="#" class="footer-logo"><img src="https://elipacko.com/wp-content/uploads/2025/10/logo-main.png" alt="Elipacko USA"></a>
+    <div class="footer-links">
+      <a href="#products">Products</a>
+      <a href="#industries">Industries</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#sustainability">Sustainability</a>
+      <a href="#contact">Contact</a>
+      <a href="mailto:info@elipacko.com">info@elipacko.com</a>
+    </div>
+    <div class="footer-copy">© 2025 Elipacko. All rights reserved. 🇺🇸 USA-Ready</div>
+  </div>
+</footer>
+
+<script>
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}
+  });
+});
+
+// Mobile menu toggle
+function toggleMenu(){
+  const links=document.querySelector('.nav-links');
+  const cta=document.querySelector('.nav-cta');
+  if(links.style.display==='flex'){
+    links.style.display='';cta.style.display='';
+  } else {
+    links.style.display='flex';
+    links.style.flexDirection='column';
+    links.style.position='absolute';
+    links.style.top='68px';
+    links.style.left='0';
+    links.style.right='0';
+    links.style.background='#fff';
+    links.style.padding='20px 5%';
+    links.style.borderBottom='1px solid #e2e8f0';
+    cta.style.display='none';
+  }
+}
+
+// Sticky nav shadow
+window.addEventListener('scroll',()=>{
+  document.querySelector('nav').style.boxShadow=
+    window.scrollY>10?'0 2px 20px rgba(0,0,0,.08)':'none';
+});
+</script>
+</body>
+</html>
