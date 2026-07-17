@@ -31,9 +31,11 @@ nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px 
 .hamburger span{width:24px;height:2px;background:var(--navy);border-radius:2px}
 
 /* HERO */
-.hero{background:linear-gradient(135deg,var(--navy) 0%,#0d3a6e 60%,#1a6bdb 100%);color:#fff;padding:90px 5% 80px;text-align:center;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:url('https://elipacko.com/wp-content/uploads/2025/10/01.webp') center/cover no-repeat;opacity:.1}
-.hero-inner{position:relative;max-width:800px;margin:0 auto}
+.hero{position:relative;color:#fff;padding:0;text-align:center;overflow:hidden;min-height:560px;display:flex;align-items:center;justify-content:center}
+.hero-video-bg{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;overflow:hidden;background:#0a2540}
+.hero-video-bg iframe{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:177.78vh;min-width:100%;height:56.25vw;min-height:100%;border:0;pointer-events:none}
+.hero-video-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,37,64,.82) 0%,rgba(13,58,110,.72) 60%,rgba(26,107,219,.55) 100%);z-index:1}
+.hero-inner{position:relative;z-index:2;max-width:800px;margin:0 auto;padding:90px 5% 80px}
 .usa-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:30px;padding:6px 18px;font-size:.85rem;font-weight:600;margin-bottom:28px;letter-spacing:.05em}
 .usa-badge .flag{font-size:1.1rem}
 h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;line-height:1.15;margin-bottom:20px}
@@ -167,6 +169,10 @@ footer{background:var(--navy);color:rgba(255,255,255,.7);padding:40px 5%}
 
 <!-- HERO -->
 <section class="hero">
+  <div class="hero-video-bg">
+    <iframe src="https://www.youtube.com/embed/NGktm6dXzgQ?autoplay=1&mute=1&loop=1&playlist=NGktm6dXzgQ&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1" title="Factory Background" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+  <div class="hero-video-overlay"></div>
   <div class="hero-inner">
     <div class="usa-badge"><span class="flag">🇺🇸</span> USA-READY PACKAGING PARTNER</div>
     <h1>Premium Corrugated Plastic Packaging — <span>Built for American Business</span></h1>
