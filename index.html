@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow-x:hidden;max-width:100%}
 :root{--navy:#0a2540;--blue:#1a6bdb;--light-blue:#e8f0fe;--white:#ffffff;--gray:#f7f9fc;--text:#1a2332;--muted:#6b7a8d}
 body{font-family:'Inter',sans-serif;color:var(--text);line-height:1.6}
 a{text-decoration:none;color:inherit}
@@ -32,16 +33,16 @@ nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px 
 
 /* HERO */
 .hero{position:relative;color:#fff;padding:0;text-align:center;overflow:hidden;min-height:560px;display:flex;align-items:center;justify-content:center}
-.hero-video-bg{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;overflow:hidden;background:#0a2540}
+.hero-video-bg{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;overflow:hidden;background:#0a2540;contain:strict}
 .hero-video-bg iframe{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:177.78vh;min-width:100%;height:56.25vw;min-height:100%;border:0;pointer-events:none}
 .hero-video-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,37,64,.82) 0%,rgba(13,58,110,.72) 60%,rgba(26,107,219,.55) 100%);z-index:1}
-.hero-inner{position:relative;z-index:2;max-width:800px;margin:0 auto;padding:90px 5% 80px}
+.hero-inner{position:relative;z-index:2;max-width:800px;margin:0 auto;padding:90px 5% 80px;box-sizing:border-box;width:100%}
 .usa-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:30px;padding:6px 18px;font-size:.85rem;font-weight:600;margin-bottom:28px;letter-spacing:.05em}
 .usa-badge .flag{font-size:1.1rem}
 h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;line-height:1.15;margin-bottom:20px}
 h1 span{color:#60a5fa}
 .hero p{font-size:1.1rem;color:rgba(255,255,255,.85);max-width:620px;margin:0 auto 36px}
-.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}@media(max-width:480px){.hero-btns{flex-direction:column;align-items:center}.hero-btns .btn{width:100%;max-width:280px;text-align:center}.hero-inner{padding:70px 6% 60px}}
 .coming-soon-strip{margin-top:40px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:14px 24px;display:inline-block;font-size:.95rem}
 .coming-soon-strip strong{color:#fbbf24}
 
