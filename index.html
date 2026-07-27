@@ -135,9 +135,8 @@ nav{position:sticky;top:0;z-index:200;background:var(--white);border-bottom:1px 
 .hero-stat .num{font-size:1.6rem;font-weight:900;color:#60a5fa}
 .hero-stat .label{font-size:.78rem;color:rgba(255,255,255,.6);font-weight:500;margin-top:2px}
 .hero-imgs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.hero-imgs img{width:100%;height:190px;object-fit:cover;border-radius:8px}
-.hero-imgs img:first-child{grid-column:1/-1;height:240px}
-.hero-imgs img{border:2px solid rgba(255,255,255,.1)}
+.hero-imgs img{width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;background:rgba(255,255,255,.05);border-radius:8px;border:2px solid rgba(255,255,255,.1);padding:4px}
+.hero-imgs img:first-child{grid-column:1/-1}
 
 /* ── TRUST BAR ── */
 .trust-bar{background:var(--navy);padding:14px 5%}
@@ -158,7 +157,7 @@ section{padding:80px 5%}
 .p-card{background:#fff;border:1px solid var(--gray-border);border-radius:14px;overflow:hidden;transition:box-shadow .2s,transform .2s;display:flex;flex-direction:column}
 .p-card:hover{box-shadow:0 8px 32px rgba(0,0,0,.1);transform:translateY(-4px)}
 .p-card-img{position:relative;overflow:hidden}
-.p-card img{width:100%;height:220px;object-fit:cover;transition:transform .3s}
+.p-card img{width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;background:#f7f9fc;padding:10px;transition:transform .3s}
 .p-card:hover img{transform:scale(1.04)}
 .p-card-badge{position:absolute;top:12px;left:12px;background:var(--navy);color:#fff;font-size:.7rem;font-weight:700;padding:4px 10px;border-radius:12px;text-transform:uppercase}
 .p-card-body{padding:20px;flex:1;display:flex;flex-direction:column}
