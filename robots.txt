@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://elipacko.com/sitemap.xml
+Sitemap: https://brazenproducts.github.io/elipacko-usa.com/sitemap.xml
