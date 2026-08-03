@@ -62,11 +62,12 @@ nav{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1px solid va
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:56px;max-width:1280px;margin:0 auto;padding:0 5%;gap:8px}
 .nav-logo{font-weight:800;font-size:1.1rem;color:var(--navy);white-space:nowrap}
 .nav-logo span{color:var(--blue)}
-.nav-links{display:flex;gap:4px;list-style:none;align-items:center;flex-wrap:nowrap}
-.nav-links a{font-size:.84rem;font-weight:500;color:var(--muted);padding:6px 10px;border-radius:6px;transition:color .15s,background .15s;white-space:nowrap}
+.nav-links{display:flex;gap:2px;list-style:none;align-items:center;flex-wrap:nowrap;overflow:hidden}
+.nav-links li{flex-shrink:0}
+.nav-links a{font-size:.78rem;font-weight:500;color:var(--muted);padding:6px 8px;border-radius:6px;transition:color .15s,background .15s;white-space:nowrap;display:inline-block;line-height:1.4}
 .nav-links a:hover{color:var(--blue);background:var(--blue-light)}
-.nav-cta{background:var(--navy);color:#fff;padding:8px 18px;border-radius:6px;font-size:.84rem;font-weight:700;white-space:nowrap}
-.nav-cta:hover{background:var(--blue);color:#fff!important}
+.nav-links .nav-cta{background:var(--navy);color:#fff!important;padding:7px 14px;border-radius:6px;font-weight:600;font-size:.78rem}
+.nav-links .nav-cta:hover{background:var(--blue);color:#fff!important}
 .breadcrumb{background:var(--gray);padding:10px 5%;font-size:.82rem;color:var(--muted);border-bottom:1px solid var(--gray-border)}
 .breadcrumb a{color:var(--blue)}
 .hero{background:linear-gradient(135deg,#0a2540,#1a3a5c);color:#fff;padding:72px 5%}
