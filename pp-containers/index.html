@@ -23,11 +23,10 @@ nav{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1px solid va
 .nav-top{display:flex;align-items:center;justify-content:space-between;height:48px;max-width:1280px;margin:0 auto;padding:0 5%}
 .nav-logo{font-weight:800;font-size:1.1rem;color:var(--navy);white-space:nowrap;text-decoration:none}
 .nav-logo span{color:var(--blue)}
-.nav-strip{background:#fff;border-top:1px solid var(--gray-border);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-.nav-strip::-webkit-scrollbar{display:none}
-.nav-strip ul{display:flex;list-style:none;padding:0 5%;margin:0;gap:2px;min-width:max-content}
-.nav-strip a{display:block;font-size:.8rem;font-weight:500;color:var(--muted);padding:8px 10px;white-space:nowrap;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
-.nav-strip a:hover{color:var(--blue);border-bottom-color:var(--blue)}
+.nav-strip{background:#fff;border-top:1px solid var(--gray-border)}
+.nav-strip ul{display:flex;flex-wrap:wrap;list-style:none;padding:4px 5%;margin:0 auto;gap:2px;max-width:1280px}
+.nav-strip a{display:block;font-size:.8rem;font-weight:500;color:var(--muted);padding:6px 9px;white-space:nowrap;border-radius:4px;transition:color .15s,background .15s}
+.nav-strip a:hover{color:var(--blue);background:var(--blue-light)}
 .breadcrumb{background:var(--gray);padding:10px 5%;font-size:.82rem;color:var(--muted)}
 .breadcrumb a{color:var(--blue)}
 .hero{color:#fff;padding:80px 5%}
