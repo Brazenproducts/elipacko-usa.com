@@ -108,25 +108,23 @@ nav{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1px solid va
 .nav-strip a{display:block;font-size:.8rem;font-weight:500;color:var(--muted);padding:6px 9px;white-space:nowrap;border-radius:4px;transition:color .15s,background .15s}
 .nav-strip a:hover{color:var(--blue);background:var(--blue-light)}
 /* ── HERO ── */
-.hero{position:relative;background:linear-gradient(135deg,#061524 0%,#0a2540 50%,#0f3460 100%);color:#fff;display:flex;align-items:center;overflow:hidden}
+.hero{position:relative;background:linear-gradient(135deg,#061524 0%,#0a2540 50%,#0f3460 100%);color:#fff;overflow:hidden}
 .hero-bg-img{position:absolute;inset:0;opacity:.12;background:url('https://brazenproducts.github.io/elipacko-assets/warehouse-stack.jpg') center/cover no-repeat;pointer-events:none}
-.hero-inner{position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:80px 5%;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:24px;padding:6px 16px;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:20px}
+.hero-inner{position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:32px 5%;display:block}
+.hero-badge{display:none}
 .hero-badge .dot{width:8px;height:8px;background:#22c55e;border-radius:50%;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-.hero h1{font-size:clamp(2rem,4.5vw,3.2rem);font-weight:900;line-height:1.1;margin-bottom:20px;letter-spacing:-.02em}
+.hero h1{font-size:clamp(1.4rem,3vw,2.2rem);font-weight:900;line-height:1.2;margin-bottom:10px;letter-spacing:-.02em}
 .hero h1 em{font-style:normal;color:#60a5fa}
-.hero-sub{font-size:1.05rem;color:rgba(255,255,255,.8);margin-bottom:32px;max-width:500px;line-height:1.7}
-.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px}
+.hero-sub{font-size:.92rem;color:rgba(255,255,255,.8);margin-bottom:16px;max-width:700px;line-height:1.6}
+.hero-btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
 .btn-primary{background:var(--blue);color:#fff;padding:13px 28px;border-radius:8px;font-weight:700;font-size:.95rem;transition:background .2s,transform .15s;border:none;cursor:pointer}
 .btn-primary:hover{background:var(--blue-dark);transform:translateY(-1px)}
 .btn-outline-white{border:2px solid rgba(255,255,255,.4);color:#fff;padding:11px 26px;border-radius:8px;font-weight:600;font-size:.95rem;transition:all .2s}
 .btn-outline-white:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.7)}
-.hero-stats{display:flex;gap:32px;flex-wrap:wrap}
 .hero-stat{text-align:left}
 .hero-stat .num{font-size:1.6rem;font-weight:900;color:#60a5fa}
 .hero-stat .label{font-size:.78rem;color:rgba(255,255,255,.6);font-weight:500;margin-top:2px}
-.hero-imgs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .hero-imgs img{width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;background:rgba(255,255,255,.05);border-radius:8px;border:2px solid rgba(255,255,255,.1);padding:4px}
 .hero-imgs img:first-child{grid-column:1/-1}
 
@@ -241,10 +239,7 @@ footer{background:#060e1a;color:rgba(255,255,255,.55);padding:48px 5% 32px}
 
 /* ── RESPONSIVE ── */
 @media(max-width:900px){
-      .hero-inner{grid-template-columns:1fr}
-  .hero-imgs{display:none}
-  .hero{padding:60px 5%}
-  .stats-inner{grid-template-columns:repeat(3,1fr)}
+            .stats-inner{grid-template-columns:repeat(3,1fr)}
   .gallery-grid{grid-template-columns:repeat(2,1fr)}
   .footer-inner{grid-template-columns:1fr 1fr}
   .process-steps::before{display:none}
@@ -266,12 +261,7 @@ footer{background:#060e1a;color:rgba(255,255,255,.55);padding:48px 5% 32px}
   .nav-cta-top{font-size:.75rem;padding:6px 12px}
 }
 @media(max-width:600px){
-  .hero{padding:32px 5% 36px}
-  .hero h1{font-size:1.7rem}
-  .hero-sub{font-size:.9rem;margin-bottom:20px}
-  .hero-btns{margin-bottom:20px}
-  .hero-stats{display:none}
-}
+          }
 </style>
 </head>
 <body>
