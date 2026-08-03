@@ -108,8 +108,8 @@ nav{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1px solid va
 .nav-strip a{display:block;font-size:.8rem;font-weight:500;color:var(--muted);padding:6px 9px;white-space:nowrap;border-radius:4px;transition:color .15s,background .15s}
 .nav-strip a:hover{color:var(--blue);background:var(--blue-light)}
 /* ── HERO ── */
-.hero{position:relative;background:linear-gradient(135deg,#061524 0%,#0a2540 50%,#0f3460 100%);color:#fff;min-height:580px;display:flex;align-items:center;overflow:hidden}
-.hero-bg-img{position:absolute;inset:0;opacity:.12;background:url('https://brazenproducts.github.io/elipacko-assets/warehouse-stack.jpg') center/cover no-repeat}
+.hero{position:relative;background:linear-gradient(135deg,#061524 0%,#0a2540 50%,#0f3460 100%);color:#fff;display:flex;align-items:center;overflow:hidden}
+.hero-bg-img{position:absolute;inset:0;opacity:.12;background:url('https://brazenproducts.github.io/elipacko-assets/warehouse-stack.jpg') center/cover no-repeat;pointer-events:none}
 .hero-inner{position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:80px 5%;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:24px;padding:6px 16px;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:20px}
 .hero-badge .dot{width:8px;height:8px;background:#22c55e;border-radius:50%;animation:pulse 2s infinite}
@@ -243,7 +243,7 @@ footer{background:#060e1a;color:rgba(255,255,255,.55);padding:48px 5% 32px}
 @media(max-width:900px){
       .hero-inner{grid-template-columns:1fr}
   .hero-imgs{display:none}
-  .hero{min-height:auto;padding:60px 5%}
+  .hero{padding:60px 5%}
   .stats-inner{grid-template-columns:repeat(3,1fr)}
   .gallery-grid{grid-template-columns:repeat(2,1fr)}
   .footer-inner{grid-template-columns:1fr 1fr}
@@ -264,6 +264,13 @@ footer{background:#060e1a;color:rgba(255,255,255,.55);padding:48px 5% 32px}
   .nav-top{height:42px;padding:0 4%}
   .nav-logo{font-size:1rem}
   .nav-cta-top{font-size:.75rem;padding:6px 12px}
+}
+@media(max-width:600px){
+  .hero{padding:32px 5% 36px}
+  .hero h1{font-size:1.7rem}
+  .hero-sub{font-size:.9rem;margin-bottom:20px}
+  .hero-btns{margin-bottom:20px}
+  .hero-stats{display:none}
 }
 </style>
 </head>
