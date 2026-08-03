@@ -20,16 +20,15 @@
 body{font-family:'Inter',sans-serif;color:#1a2332;line-height:1.6}
 a{text-decoration:none;color:inherit}
 :root{--navy:#0a2540;--blue:#1a6bdb;--green:#16a34a;--light-green:#f0fdf4;--gray:#f7f9fc;--muted:#6b7a8d}
-nav{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1px solid #e2e8f0;box-shadow:0 1px 4px rgba(0,0,0,.06)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:56px;max-width:1280px;margin:0 auto;padding:0 5%;gap:8px}
-.nav-logo{font-weight:800;font-size:1.1rem;color:#0a2540;white-space:nowrap}
-.nav-logo span{color:#1a6bdb}
-.nav-links{display:flex;gap:2px;list-style:none;align-items:center;flex-wrap:nowrap;overflow:hidden}
-.nav-links li{flex-shrink:0}
-.nav-links a{font-size:.78rem;font-weight:500;color:var(--muted);padding:6px 8px;border-radius:6px;transition:color .15s,background .15s;white-space:nowrap;display:inline-block;line-height:1.4}
-.nav-links a:hover{color:var(--blue);background:var(--blue-light)}
-.nav-links .nav-cta{background:var(--navy);color:#fff!important;padding:7px 14px;border-radius:6px;font-weight:600;font-size:.78rem}
-.nav-links .nav-cta:hover{background:var(--blue);color:#fff!important}
+nav{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1px solid var(--gray-border);box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.nav-top{display:flex;align-items:center;justify-content:space-between;height:48px;max-width:1280px;margin:0 auto;padding:0 5%}
+.nav-logo{font-weight:800;font-size:1.1rem;color:var(--navy);white-space:nowrap;text-decoration:none}
+.nav-logo span{color:var(--blue)}
+.nav-strip{background:#fff;border-top:1px solid var(--gray-border);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.nav-strip::-webkit-scrollbar{display:none}
+.nav-strip ul{display:flex;list-style:none;padding:0 5%;margin:0;gap:2px;min-width:max-content}
+.nav-strip a{display:block;font-size:.8rem;font-weight:500;color:var(--muted);padding:8px 10px;white-space:nowrap;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.nav-strip a:hover{color:var(--blue);border-bottom-color:var(--blue)}
 .breadcrumb{background:var(--gray);padding:10px 5%;font-size:.82rem;color:var(--muted)}
 .breadcrumb a{color:var(--blue)}
 .hero{background:linear-gradient(135deg,#052e16,#14532d);color:#fff;padding:80px 5%}
@@ -79,7 +78,7 @@ h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;color:var(--navy);margin-b
 .cta-bar a{background:#fff;color:var(--navy);padding:14px 32px;border-radius:6px;font-weight:700;display:inline-block}
 footer{background:var(--navy);color:rgba(255,255,255,.6);padding:32px 5%;text-align:center;font-size:.82rem}
 footer a{color:rgba(255,255,255,.5)}
-@media(max-width:768px){.hero-inner{grid-template-columns:1fr}.hero-imgs{display:none}.two-col{grid-template-columns:1fr}.nav-links,.nav-cta{display:none}}
+@media(max-width:768px){.hero-inner{grid-template-columns:1fr}.hero-imgs{display:none}.two-col{grid-template-columns:1fr}.nav-links,}
 </style>
 </head>
 <body>
@@ -92,26 +91,27 @@ footer a{color:rgba(255,255,255,.5)}
 </div>
 
 <nav>
-  <div class="nav-inner">
+  <div class="nav-top">
     <a href="../" class="nav-logo">Eli<span>packo</span> USA</a>
-    <ul class="nav-links">
+    <a href="../#contact" class="nav-cta-top">Get a Quote</a>
+  </div>
+  <div class="nav-strip">
+    <ul>
       <li><a href="../pp-corrugated-boxes/">PP Boxes</a></li>
       <li><a href="../pp-gaylord-boxes/">Gaylords</a></li>
       <li><a href="../pp-pallets/">Pallets</a></li>
       <li><a href="../pp-containers/">Containers</a></li>
       <li><a href="../pp-dividers/">Dividers</a></li>
       <li><a href="../pp-trays/">Trays</a></li>
-      <li><a href="../pp-turnover-boxes/">Turnover</a></li>
+      <li><a href="../pp-turnover-boxes/">Turnover Boxes</a></li>
       <li><a href="../pp-ballot-boxes/">Ballot Boxes</a></li>
-      <li><a href="../storage-moving-boxes/">Storage</a></li>
+      <li><a href="../storage-moving-boxes/">Storage Boxes</a></li>
       <li><a href="../pp-meat-lugs/">Meat Lugs</a></li>
       <li><a href="../pp-poultry-boxes/">Poultry</a></li>
       <li><a href="../agriculture-packaging/">Agriculture</a></li>
       <li><a href="../seafood-packaging/">Seafood</a></li>
       <li><a href="../pp-corrugated-sheets/">PP Sheets</a></li>
-      <li><a href="../#contact" class="nav-cta">Get a Quote</a></li>
     </ul>
-    <a href="../#contact" class="nav-cta">Get a Quote</a>
   </div>
 </nav>
 <div class="breadcrumb"><a href="../">Home</a> › Agriculture &amp; Produce Packaging</div>
