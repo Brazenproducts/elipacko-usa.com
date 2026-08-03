@@ -78,11 +78,19 @@ h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;color:var(--navy);margin-b
 footer{background:var(--navy);color:rgba(255,255,255,.6);padding:32px 5%;text-align:center;font-size:.82rem}
 footer a{color:rgba(255,255,255,.5)}
 @media(max-width:768px){.hero-inner{grid-template-columns:1fr}.hero-imgs{display:none}.two-col{grid-template-columns:1fr}.nav-links,}
+@media(max-width:600px){
+  .banner-top{padding:10px 4%;font-size:.82rem}
+  .nav-strip ul{padding:3px 3%;gap:1px}
+  .nav-strip a{font-size:.75rem;padding:5px 7px}
+  .nav-top{height:42px;padding:0 4%}
+  .nav-logo{font-size:1rem}
+  .nav-cta-top{font-size:.75rem;padding:6px 12px}
+}
 </style>
 </head>
 <body>
 <!-- USA MANUFACTURING TOP BANNER -->
-<div style="background:#f59e0b;color:#1a1a1a;text-align:center;padding:18px 5%;font-size:1.05rem;font-weight:700;line-height:1.5">
+<div class="banner-top" style="background:#f59e0b;color:#1a1a1a;text-align:center;padding:18px 5%;font-size:1.05rem;font-weight:700;line-height:1.5">
   <span style="display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center">
     <span style="background:#1a1a1a;color:#f59e0b;border-radius:20px;padding:4px 14px;font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;white-space:nowrap">&#9679; In Development</span>
     &#127482;&#127480; <strong>USA Manufacturing &mdash; Coming Soon.</strong> Domestic US production capacity in development &mdash; Made-in-USA options on the way. <strong>0% anti-dumping duty</strong> available now.
