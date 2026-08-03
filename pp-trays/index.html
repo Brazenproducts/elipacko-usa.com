@@ -42,10 +42,10 @@ nav{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1px solid va
 .nav-strip a:hover{color:var(--blue);background:var(--blue-light)}
 .breadcrumb{background:var(--gray);padding:10px 5%;font-size:.82rem;color:var(--muted);border-bottom:1px solid var(--gray-border)}
 .breadcrumb a{color:var(--blue)}
-.hero{background:linear-gradient(135deg,#0a2540,#1a3a5c);color:#fff;padding:36px 5%}
+.hero{background:linear-gradient(135deg,#0a2540,#1a3a5c);color:#fff;padding:24px 5%}
 .hero-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
 .hero-badge{display:none}
-h1{font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;line-height:1.15;margin-bottom:18px;letter-spacing:-.02em}
+h1{font-size:clamp(1.3rem,2.5vw,2rem);font-weight:900;line-height:1.15;margin-bottom:18px;letter-spacing:-.02em}
 h1 em{font-style:normal;color:#60a5fa}
 .hero-sub{font-size:1rem;color:rgba(255,255,255,.8);margin-bottom:28px;line-height:1.75;max-width:520px}
 .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
@@ -53,18 +53,18 @@ h1 em{font-style:normal;color:#60a5fa}
 .btn-outline-w{border:2px solid rgba(255,255,255,.4);color:#fff;padding:10px 24px;border-radius:8px;font-weight:600}
 .hero-imgs img{width:100%;aspect-ratio:4/3;object-fit:contain;background:rgba(255,255,255,.07);border-radius:8px;padding:8px;border:1px solid rgba(255,255,255,.12)}
 .hero-imgs img:first-child{grid-column:1/-1}
-section{padding:36px 5%}
+section{padding:24px 5%}
 .section-inner{max-width:1280px;margin:0 auto}
-.section-label{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--blue);margin-bottom:8px}
-h2{font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:800;color:var(--navy);margin-bottom:12px;letter-spacing:-.02em;line-height:1.2}
-.section-sub{color:var(--muted);max-width:680px;margin-bottom:20px;font-size:.97rem;line-height:1.75}
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
-.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.card{background:#fff;border:1px solid var(--gray-border);border-radius:14px;padding:28px}
-.card h3{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:8px}
+.section-label{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--blue);margin-bottom:4px}
+h2{font-size:clamp(1.2rem,2vw,1.7rem);font-weight:800;color:var(--navy);margin-bottom:8px;letter-spacing:-.02em;line-height:1.2}
+.section-sub{color:var(--muted);max-width:680px;margin-bottom:12px;font-size:.97rem;line-height:1.75}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.card{background:#fff;border:1px solid var(--gray-border);border-radius:10px;padding:16px}
+.card h3{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:4px}
 .card p{font-size:.88rem;color:var(--muted);line-height:1.7}
 .icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:14px}
-.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .photo-grid img{width:100%;aspect-ratio:4/3;object-fit:contain;background:#f7f9fc;border-radius:10px;border:1px solid var(--gray-border);padding:4px}
 .spec-table{width:100%;border-collapse:collapse;font-size:.88rem}
 .spec-table th{background:var(--navy);color:#fff;padding:10px 14px;text-align:left;font-weight:600}
@@ -78,22 +78,22 @@ h2{font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:800;color:var(--navy);margin
 .bg-navy h2{color:#fff}
 .bg-navy .section-label{color:#60a5fa}
 .bg-navy .section-sub{color:rgba(255,255,255,.75)}
-.compliance-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-top:32px}
+.compliance-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-top:32px}
 .comp-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:20px;text-align:center}
 .comp-card .badge{font-size:1rem;font-weight:900;color:#60a5fa;margin-bottom:6px}
 .comp-card p{font-size:.82rem;color:rgba(255,255,255,.7);line-height:1.6}
-.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px}
 .related-card{background:#fff;border:1px solid var(--gray-border);border-radius:10px;padding:20px}
 .related-card h4{font-size:.92rem;font-weight:700;color:var(--navy);margin-bottom:6px}
 .related-card p{font-size:.8rem;color:var(--muted);margin-bottom:12px}
 .related-card a{font-size:.82rem;color:var(--blue);font-weight:600}
-.cta-bar{background:linear-gradient(135deg,var(--navy),#1a3a6c);color:#fff;padding:36px 5%;text-align:center}
+.cta-bar{background:linear-gradient(135deg,var(--navy),#1a3a6c);color:#fff;padding:24px 5%;text-align:center}
 .cta-bar h2{color:#fff;margin-bottom:12px}
 .cta-bar p{color:rgba(255,255,255,.8);max-width:560px;margin:0 auto 28px}
 .cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .btn-white{background:#fff;color:var(--navy);padding:13px 30px;border-radius:8px;font-weight:700}
 .btn-outline-w2{border:2px solid rgba(255,255,255,.4);color:#fff;padding:11px 28px;border-radius:8px;font-weight:600}
-footer{background:#060e1a;color:rgba(255,255,255,.5);padding:36px 5% 28px;font-size:.82rem}
+footer{background:#060e1a;color:rgba(255,255,255,.5);padding:24px 5% 28px;font-size:.82rem}
 .footer-inner{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:28px}
 .footer-brand{font-weight:800;font-size:1rem;color:#fff;margin-bottom:6px}
 .footer-brand span{color:var(--blue)}
@@ -109,7 +109,7 @@ details[open] summary::after{content:'－'}
 details[open] summary{color:var(--blue);background:var(--blue-light);border-radius:10px 10px 0 0}
 .faq-body{padding:0 20px 16px;color:var(--muted);font-size:.9rem;line-height:1.8}
 @media(max-width:900px){.two-col{grid-template-columns:1fr}.three-col{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){section{padding:36px 5%}.three-col{grid-template-columns:1fr}.photo-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){section{padding:24px 5%}.three-col{grid-template-columns:1fr}.photo-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){
   .banner-top{padding:10px 4%;font-size:.82rem}
   .nav-strip ul{padding:3px 3%;gap:1px}
@@ -267,10 +267,10 @@ details[open] summary{color:var(--blue);background:var(--blue-light);border-radi
   </div>
 </section>
 
-<section style="max-width:800px;margin:0 auto;padding:36px 5%">
+<section style="max-width:800px;margin:0 auto;padding:24px 5%">
   <div class="section-label">FAQ</div>
   <h2>Frequently Asked Questions</h2>
-  <p class="section-sub" style="margin-bottom:32px">Common questions from US buyers sourcing pp corrugated plastic trays.</p>
+  <p class="section-sub" style="margin-bottom:12px">Common questions from US buyers sourcing pp corrugated plastic trays.</p>
     <details  open>
       <summary>What is flat-pack knock-down (KD) tray design?</summary>
       <div class="faq-body">Flat-pack knock-down means the tray ships and stores as a flat die-cut blank. When needed, it is folded along pre-scored lines and the corner tabs lock in place — no tools, no glue. This reduces shipping volume by 80–90% vs pre-assembled trays, saving significant freight cost.</div>
