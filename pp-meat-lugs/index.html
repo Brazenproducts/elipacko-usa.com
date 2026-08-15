@@ -145,6 +145,23 @@ li{font-size:.95rem!important;color:#374151!important;line-height:1.75!important
 section{padding:44px 5%!important}
 strong{color:#1a2332!important}
 /* ── END CANONICAL TYPOGRAPHY ── */
+/* ── DARK BG TEXT OVERRIDES ── */
+.hero h1,.hero h2,.hero p,.hero li,
+.hero-inner h1,.hero-inner h2,.hero-inner p,
+.cta-bar h2,.cta-bar p,
+.compliance h2,.compliance p,
+.trust-bar *,
+section[style*="background:#0"]>*,
+section[style*="background:var(--navy)"]>*{color:#fff!important}
+.hero p,.hero-inner p,.hero .hero-sub{color:rgba(255,255,255,.85)!important}
+.hero h1,.hero-inner h1{color:#fff!important}
+/* Stats: horizontal pills side by side */
+.hero-stats{display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;gap:8px!important;margin-top:14px!important}
+.hero-stat{display:inline-flex!important;align-items:center!important;gap:5px!important;width:auto!important;flex:0 0 auto!important}
+.hero-stat .num{color:#60a5fa!important;font-size:.92rem!important;font-weight:900!important}
+.hero-stat .label{color:rgba(255,255,255,.8)!important;font-size:.78rem!important}
+/* ── END DARK BG OVERRIDES ── */
+
 
 </style>
 </head>
