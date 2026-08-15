@@ -42,8 +42,7 @@ nav{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1px solid va
 .btn-white{background:#fff;color:var(--navy);padding:12px 24px;border-radius:6px;font-weight:700;font-size:.9rem}
 .btn-outline-w{border:2px solid rgba(255,255,255,.5);color:#fff;padding:12px 24px;border-radius:6px;font-weight:600;font-size:.9rem}
 .hero-imgs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.hero-imgs img{width:100%;border-radius:8px;object-fit:contain;background:#f7f9fc}
-.hero-imgs img:first-child{grid-column:1/-1;aspect-ratio:16/9}
+.hero-imgs img{width:100%;border-radius:8px;object-fit:contain;background:#fff;aspect-ratio:16/9}
 .hero-imgs img:not(:first-child){aspect-ratio:4/3}
 /* ToC */
 .toc{background:#f0f9ff;border:1px solid #bae6fd;border-radius:10px;padding:20px 24px;margin:32px 0}
@@ -146,6 +145,9 @@ section{padding:44px 5%!important}
 strong{color:#1a2332!important}
 /* ── END CANONICAL TYPOGRAPHY ── */
 /* ── DARK BG TEXT OVERRIDES ── */
+.hero,.hero *,.hero-inner,.hero-inner *{color:#fff!important}
+.hero p,.hero .hero-sub,.hero-inner p{color:rgba(255,255,255,.85)!important}
+.hero .hero-badge{color:rgba(255,255,255,.9)!important;display:inline-block!important}
 .hero h1,.hero h2,.hero p,.hero li,
 .hero-inner h1,.hero-inner h2,.hero-inner p,
 .cta-bar h2,.cta-bar p,
@@ -197,7 +199,7 @@ section[style*="background:var(--navy)"]>*{color:#fff!important}
 <section class="hero" style="background:linear-gradient(135deg,#0c1f3a,#1a3a6b)">
   <div class="hero-inner">
     <div>
-      <div class="hero-badge">📦 Bulk Container Specialist</div>
+      <div class="hero-badge" style="color:rgba(255,255,255,.9)">📦 Bulk Container Specialist</div>
       <h1>PP Gaylord Boxes —<br><span style="color:#93c5fd">2,200 lb Capacity.<br>Reusable. Waterproof.<br>No ISPM-15.</span></h1>
       <p>Polypropylene corrugated gaylord boxes for bulk material handling. Outlast cardboard 50:1. 100% waterproof, forklift-ready, 0% anti-dumping duty (Thailand-manufactured) entering the USA.</p>
       <div class="hero-btns">

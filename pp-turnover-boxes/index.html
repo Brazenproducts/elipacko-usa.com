@@ -51,10 +51,7 @@ h1 em{font-style:normal;color:#60a5fa}
 .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
 .btn-primary{background:var(--blue);color:#fff;padding:12px 26px;border-radius:8px;font-weight:700;font-size:.95rem}
 .btn-outline-w{border:2px solid rgba(255,255,255,.4);color:#fff;padding:10px 24px;border-radius:8px;font-weight:600}
-.hero-imgs img{width:100%;aspect-ratio:1/1;object-fit:contain;background:rgba(255,255,255,.07);border-radius:8px;padding:8px;border:1px solid rgba(255,255,255,.12)}
-.hero-imgs img:first-child{grid-column:1/-1}
-section{padding:24px 5%}
-.section-inner{max-width:1280px;margin:0 auto}
+.hero-imgs img{width:100%;aspect-ratio:1/1;object-fit:contain;background:#fff;border-radius:8px;margin:0 auto}
 .section-label{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--blue);margin-bottom:4px}
 h2{font-size:clamp(1.2rem,2vw,1.7rem);font-weight:800;color:var(--navy);margin-bottom:8px;letter-spacing:-.02em;line-height:1.2}
 .section-sub{color:var(--muted);max-width:680px;margin-bottom:12px;font-size:.97rem;line-height:1.75}
@@ -161,6 +158,9 @@ section{padding:44px 5%!important}
 strong{color:#1a2332!important}
 /* ── END CANONICAL TYPOGRAPHY ── */
 /* ── DARK BG TEXT OVERRIDES ── */
+.hero,.hero *,.hero-inner,.hero-inner *{color:#fff!important}
+.hero p,.hero .hero-sub,.hero-inner p{color:rgba(255,255,255,.85)!important}
+.hero .hero-badge{color:rgba(255,255,255,.9)!important;display:inline-block!important}
 .hero h1,.hero h2,.hero p,.hero li,
 .hero-inner h1,.hero-inner h2,.hero-inner p,
 .cta-bar h2,.cta-bar p,
@@ -217,7 +217,7 @@ section[style*="background:var(--navy)"]>*{color:#fff!important}
 <section class="hero">
   <div class="hero-inner">
     <div>
-      <div class="hero-badge">Returnable Packaging — 300–500 Trip Cycle Life</div>
+      <div class="hero-badge" style="color:rgba(255,255,255,.9)">Returnable Packaging — 300–500 Trip Cycle Life</div>
       <h1>PP Corrugated Turnover Boxes — <em>Reusable, Returnable, Built for Closed-Loop Logistics</em></h1>
       <p class="hero-sub">Polypropylene corrugated turnover boxes — also called returnable totes or circulation boxes — for closed-loop manufacturing, automotive supply chains, and industrial logistics. Reusable 300–500 trips. 100% waterproof. 0% anti-dumping duty (Thailand-manufactured). Asia's largest PP manufacturer.</p>
       <div class="hero-btns">

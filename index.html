@@ -125,11 +125,7 @@ nav{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1px solid va
 .hero-stats{display:flex;flex-direction:row;flex-wrap:wrap;gap:8px 14px;margin-top:14px}.hero-stat{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border-radius:20px;padding:5px 12px}
 .hero-stat .num{font-size:.92rem;font-weight:900;color:#60a5fa;white-space:nowrap}
 .hero-stat .label{font-size:.78rem;color:rgba(255,255,255,.75);font-weight:500}
-.hero-imgs img{width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;background:rgba(255,255,255,.05);border-radius:8px;border:2px solid rgba(255,255,255,.1);padding:4px}
-.hero-imgs img:first-child{grid-column:1/-1}
-
-/* ── TRUST BAR ── */
-.trust-bar{background:var(--navy);padding:14px 5%}
+.hero-imgs img{width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;background:#fff;border-radius:8px;padding:14px 5%}
 .trust-bar-inner{max-width:1280px;margin:0 auto;display:flex;justify-content:center;gap:40px;flex-wrap:wrap;align-items:center}
 .trust-item{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.75);font-size:.82rem;font-weight:500}
 .trust-item svg{opacity:.8;flex-shrink:0}
@@ -313,6 +309,9 @@ section{padding:44px 5%!important}
 strong{color:#1a2332!important}
 /* ── END CANONICAL TYPOGRAPHY ── */
 /* ── DARK BG TEXT OVERRIDES ── */
+.hero,.hero *,.hero-inner,.hero-inner *{color:#fff!important}
+.hero p,.hero .hero-sub,.hero-inner p{color:rgba(255,255,255,.85)!important}
+.hero .hero-badge{color:rgba(255,255,255,.9)!important;display:inline-block!important}
 .hero h1,.hero h2,.hero p,.hero li,
 .hero-inner h1,.hero-inner h2,.hero-inner p,
 .cta-bar h2,.cta-bar p,
@@ -369,7 +368,7 @@ section[style*="background:var(--navy)"]>*{color:#fff!important}
 <section class="hero">
   <div class="hero-inner">
     <div>
-      <div class="hero-badge">
+      <div class="hero-badge" style="color:rgba(255,255,255,.9)">
         <span class="dot"></span>
         0% anti-dumping duty (Thailand-manufactured) — US-Ready Packaging Partner
       </div>
