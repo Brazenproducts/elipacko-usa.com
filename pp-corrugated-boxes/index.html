@@ -31,7 +31,7 @@ nav{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1px solid va
 .nav-logo span{color:var(--blue)}
 .nav-cta-top{background:var(--blue);color:#fff;padding:7px 16px;border-radius:6px;font-size:.82rem;font-weight:700}
 .nav-strip{background:#fff;border-top:1px solid var(--border)}
-.nav-strip ul{display:flex;flex-wrap:nowrap;list-style:none;padding:0 5%;margin:0 auto;gap:2px;max-width:1280px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;-ms-overflow-style:none}.nav-strip ul::-webkit-scrollbar{display:none}
+.nav-strip ul{display:flex;flex-wrap:nowrap;list-style:none;padding:4px 5%;margin:0 auto;gap:2px;max-width:1280px}
 .nav-strip a{display:block;font-size:.8rem;font-weight:500;color:var(--muted);padding:6px 9px;white-space:nowrap;border-radius:4px}
 .nav-strip a:hover,.nav-strip a.active{color:var(--blue);background:var(--blue-light)}
 .breadcrumb{background:var(--gray);padding:10px 5%;font-size:.82rem;color:var(--muted)}
@@ -102,6 +102,27 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:28px 5%;font-si
 footer a{color:rgba(255,255,255,.5)}
 @media(max-width:768px){.two-col,.hero-inner{grid-template-columns:1fr}.pg{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:480px){.pg{grid-template-columns:1fr}.hero{padding:36px 4%}}
+
+/* ── MOBILE NAV HAMBURGER ── */
+.nav-hamburger{display:none;background:none;border:none;cursor:pointer;padding:6px;flex-direction:column;gap:5px;align-items:center;justify-content:center}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--navy,#0a2540);border-radius:2px;transition:all .25s}
+@media(max-width:768px){
+  .nav-hamburger{display:flex}
+  .nav-cta-top{display:none}
+  .nav-strip{display:none;border-top:1px solid var(--gray-border,#e2e8f0)}
+  .nav-strip.open{display:block}
+  .nav-strip ul{flex-direction:column;flex-wrap:nowrap;overflow:visible;padding:8px 0;gap:0}
+  .nav-strip a{padding:11px 20px;font-size:.9rem;border-radius:0;border-bottom:1px solid #f0f4f8;white-space:normal}
+  .nav-strip a:last-child{border-bottom:none}
+  .nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nav-hamburger.open span:nth-child(2){opacity:0}
+  .nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
+@media(min-width:769px){
+  .nav-strip{display:block!important}
+  .nav-strip ul{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+  .nav-strip ul::-webkit-scrollbar{display:none}
+}
 </style>
 </head>
 <body>
@@ -112,6 +133,7 @@ footer a{color:rgba(255,255,255,.5)}
   <div class="nav-top">
     <a href="../" class="nav-logo">Eli<span>packo</span> USA</a>
     <a href="../#contact" class="nav-cta-top">Get a Quote</a>
+    <button class="nav-hamburger" aria-label="Menu" onclick="this.classList.toggle('open');document.querySelector('.nav-strip').classList.toggle('open')"><span></span><span></span><span></span></button>
   </div>
   <div class="nav-strip">
     <ul>

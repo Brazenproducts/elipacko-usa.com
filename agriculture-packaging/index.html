@@ -26,7 +26,7 @@ nav{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1px solid va
 .nav-logo{font-weight:800;font-size:1.1rem;color:var(--navy);white-space:nowrap}
 .nav-logo span{color:var(--blue)}
 .nav-strip{background:#fff;border-top:1px solid var(--border)}
-.nav-strip ul{display:flex;flex-wrap:nowrap;list-style:none;padding:0 5%;margin:0 auto;gap:2px;max-width:1280px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;-ms-overflow-style:none}.nav-strip ul::-webkit-scrollbar{display:none}
+.nav-strip ul{display:flex;flex-wrap:nowrap;list-style:none;padding:4px 5%;margin:0 auto;gap:2px;max-width:1280px}
 .nav-strip a{display:block;font-size:.8rem;font-weight:500;color:var(--muted);padding:6px 9px;white-space:nowrap;border-radius:4px;transition:color .15s,background .15s}
 .nav-strip a:hover,.nav-strip a.active{color:var(--blue);background:#eff6ff}
 .nav-cta-top{background:var(--blue);color:#fff;padding:8px 18px;border-radius:6px;font-weight:600;font-size:.82rem}
@@ -94,10 +94,33 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:28px 5%;text-al
 footer a{color:rgba(255,255,255,.5)}
 @media(max-width:768px){.hero-inner{grid-template-columns:1fr}.two-col{grid-template-columns:1fr}.photo-gallery{grid-template-columns:1fr 1fr}}
 @media(max-width:480px){.hero{padding:36px 4%}.photo-gallery{grid-template-columns:1fr}}
+
+/* ── MOBILE NAV HAMBURGER ── */
+.nav-hamburger{display:none;background:none;border:none;cursor:pointer;padding:6px;flex-direction:column;gap:5px;align-items:center;justify-content:center}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--navy,#0a2540);border-radius:2px;transition:all .25s}
+@media(max-width:768px){
+  .nav-hamburger{display:flex}
+  .nav-cta-top{display:none}
+  .nav-strip{display:none;border-top:1px solid var(--gray-border,#e2e8f0)}
+  .nav-strip.open{display:block}
+  .nav-strip ul{flex-direction:column;flex-wrap:nowrap;overflow:visible;padding:8px 0;gap:0}
+  .nav-strip a{padding:11px 20px;font-size:.9rem;border-radius:0;border-bottom:1px solid #f0f4f8;white-space:normal}
+  .nav-strip a:last-child{border-bottom:none}
+  .nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nav-hamburger.open span:nth-child(2){opacity:0}
+  .nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
+@media(min-width:769px){
+  .nav-strip{display:block!important}
+  .nav-strip ul{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+  .nav-strip ul::-webkit-scrollbar{display:none}
+}
 </style>
 </head>
 <body><div class="banner-top">&#127482;&#127480; Manufacturer Direct &nbsp;|&nbsp; <strong>0% anti-dumping duty (Thailand mfg.)</strong> &nbsp;|&nbsp; PP Corrugated Products In Stock &nbsp;|&nbsp; 🇺🇸 USA Manufacturing Coming Soon &nbsp;|&nbsp; Manufactured in China, Vietnam &amp; Thailand</div>
-<nav><div class="nav-top"><a href="../" class="nav-logo">Eli<span>packo</span> USA</a><a href="../#contact" class="nav-cta-top">Get a Quote</a></div>
+<nav><div class="nav-top"><a href="../" class="nav-logo">Eli<span>packo</span> USA</a><a href="../#contact" class="nav-cta-top">Get a Quote</a>
+    <button class="nav-hamburger" aria-label="Menu" onclick="this.classList.toggle('open');document.querySelector('.nav-strip').classList.toggle('open')"><span></span><span></span><span></span></button>
+  </div>
 <div class="nav-strip"><ul><li><a href="../pp-corrugated-boxes/">PP Boxes</a></li><li><a href="../pp-gaylord-boxes/">Gaylords</a></li><li><a href="../pp-pallets/">Pallets</a></li><li><a href="../pp-containers/">Containers</a></li><li><a href="../pp-dividers/">Dividers</a></li><li><a href="../pp-trays/">Trays</a></li><li><a href="../pp-turnover-boxes/">Turnover Boxes</a></li><li><a href="../pp-ballot-boxes/">Ballot Boxes</a></li><li><a href="../pp-voting-booths/">Voting Booths</a></li><li><a href="../pp-post-office-boxes/">Post Office Boxes</a></li><li><a href="../storage-moving-boxes/">Storage Boxes</a></li><li><a href="../pp-meat-lugs/">Meat Lugs</a></li><li><a href="../pp-poultry-boxes/">Poultry Boxes</a></li><li><a href="../agriculture-packaging/"class="active">Produce Boxes</a></li><li><a href="../seafood-packaging/">Seafood Boxes</a></li><li><a href="../pp-corrugated-sheets/">PP Sheets</a></li></ul></div></nav>
 <div class="breadcrumb"><a href="../">Home</a> › Agriculture Packaging</div>
 <section class="hero" style="background:linear-gradient(135deg,#14532d,#16a34a)">
