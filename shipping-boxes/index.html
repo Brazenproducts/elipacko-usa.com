@@ -107,7 +107,7 @@ footer a{color:rgba(255,255,255,.5)}
 
 
 }
-html{overflow-x:hidden!important}body{overflow-x:hidden!important;max-width:100%}
+
 
 
 /* ── MOBILE NAV: ALL TABS VISIBLE ── */
@@ -128,6 +128,14 @@ html{overflow-x:hidden!important}body{overflow-x:hidden!important;max-width:100%
   section{padding:28px 5%}
   h2{font-size:1.3rem}
 }
+
+/* ── TABLE + PAGE OVERFLOW FIX ── */
+html,body{overflow-x:hidden!important;max-width:100vw!important}
+*{box-sizing:border-box;max-width:100%}
+table,.ct{display:block!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch;width:100%!important;max-width:100%!important}
+td,th{word-break:break-word;min-width:50px}
+img{max-width:100%!important;height:auto}
+/* ── END TABLE FIX ── */
 </style>
 </head>
 <body>
@@ -200,7 +208,7 @@ html{overflow-x:hidden!important}body{overflow-x:hidden!important;max-width:100%
   <div class="si">
     <div class="section-label">Material Comparison</div>
     <h2>PP Corrugated vs Cardboard Shipping Boxes — Full Comparison</h2>
-    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;width:100%;max-width:100%"><table class="ct">
+    <table class="ct">
       <tr><th>Property</th><th>PP Corrugated (Elipacko)</th><th>Single-Wall Cardboard</th><th>Double-Wall Cardboard</th></tr>
       <tr><td>Waterproof</td><td class="yes">✓ 100%</td><td class="no">✗ Fails when wet</td><td class="no">✗ Fails when wet</td></tr>
       <tr><td>Reuse cycles</td><td class="yes">200–500</td><td class="no">1–2</td><td class="no">2–4</td></tr>
@@ -212,7 +220,7 @@ html{overflow-x:hidden!important}body{overflow-x:hidden!important;max-width:100%
       <tr><td>Cost per trip (300 cycles)</td><td class="yes">$0.03–$0.10</td><td class="no">$0.80–$3</td><td class="no">$0.50–$2</td></tr>
       <tr><td>Pressure washable</td><td class="yes">✓ Yes</td><td class="no">✗ Destroyed</td><td class="no">✗ Destroyed</td></tr>
       <tr><td>End-of-life</td><td class="yes">Recyclable PP #5</td><td class="yes">Recyclable paper</td><td class="yes">Recyclable paper</td></tr>
-    </table></div>
+    </table>
     <div class="info"><p><strong>Bottom line:</strong> For closed-loop supply chains — produce DCs, protein processors, automotive JIT, pharmaceutical return packaging — PP corrugated shipping boxes reduce total packaging cost by 90–97% compared to one-way cardboard over a 300-trip fleet life.</p></div>
   </div>
 </section>
@@ -237,7 +245,7 @@ html{overflow-x:hidden!important}body{overflow-x:hidden!important;max-width:100%
     <div class="section-label">Specifications</div>
     <h2>PP Corrugated Shipping Box Specifications</h2>
     <div class="two-col">
-      <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;width:100%;max-width:100%"><table class="ct">
+      <table class="ct">
         <tr><th>Specification</th><th>Value</th></tr>
         <tr><td>Material</td><td>Virgin copolymer PP twin-wall corrugated</td></tr>
         <tr><td>Wall thickness</td><td>4mm / 6mm / 8mm</td></tr>
@@ -252,7 +260,7 @@ html{overflow-x:hidden!important}body{overflow-x:hidden!important;max-width:100%
         <tr><td>MOQ</td><td>500 pcs</td></tr>
         <tr><td>Lead time</td><td>3–5 days production</td></tr>
         <tr><td>Anti-dumping duty</td><td>0% (Thailand-manufactured)</td></tr>
-      </table></div>
+      </table>
       <div>
         <img src="https://brazenproducts.github.io/elipacko-assets/packing-box-sdc10139.jpg" alt="PP corrugated shipping box open top deep blue — Elipacko USA" loading="lazy" style="width:100%;border-radius:10px;border:1px solid var(--border);margin-bottom:12px">
         <img src="https://brazenproducts.github.io/elipacko-assets/packing-box-sdc10138.jpg" alt="PP corrugated shipping box stack — Elipacko USA" loading="lazy" style="width:100%;border-radius:10px;border:1px solid var(--border)">
@@ -265,7 +273,7 @@ html{overflow-x:hidden!important}body{overflow-x:hidden!important;max-width:100%
   <div class="si ab">
     <div class="section-label">Cost Analysis</div>
     <h2>Cost Per Trip — PP vs Cardboard</h2>
-    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;width:100%;max-width:100%"><table class="ct">
+    <table class="ct">
       <tr><th>Metric</th><th>Cardboard (one-way)</th><th>PP Corrugated (returnable)</th></tr>
       <tr><td>Unit cost</td><td>$2.00</td><td>$18.00</td></tr>
       <tr><td>Avg trips/unit</td><td>1.5</td><td>300</td></tr>
@@ -274,7 +282,7 @@ html{overflow-x:hidden!important}body{overflow-x:hidden!important;max-width:100%
       <tr><td><strong>Total per trip</strong></td><td><strong>$1.53</strong></td><td><strong>$0.06</strong></td></tr>
       <tr><td><strong>1,000 boxes × 300 trips</strong></td><td><strong>$459,000</strong></td><td><strong>$18,000</strong></td></tr>
       <tr><td><strong>Total savings</strong></td><td colspan="2"><strong class="yes">$441,000 — 96% reduction</strong></td></tr>
-    </table></div>
+    </table>
     <div class="note"><p><strong>Payback period:</strong> A $18 PP box pays back vs $2 cardboard in approximately 14 trips. At 5 trips per week, payback is under 3 weeks.</p></div>
   </div>
 </section>

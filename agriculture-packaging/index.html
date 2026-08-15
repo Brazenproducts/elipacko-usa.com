@@ -101,7 +101,7 @@ footer a{color:rgba(255,255,255,.5)}
 
 
 }
-html{overflow-x:hidden!important}body{overflow-x:hidden!important;max-width:100%}
+
 
 
 /* ── MOBILE NAV: ALL TABS VISIBLE ── */
@@ -122,6 +122,14 @@ html{overflow-x:hidden!important}body{overflow-x:hidden!important;max-width:100%
   section{padding:28px 5%}
   h2{font-size:1.3rem}
 }
+
+/* ── TABLE + PAGE OVERFLOW FIX ── */
+html,body{overflow-x:hidden!important;max-width:100vw!important}
+*{box-sizing:border-box;max-width:100%}
+table,.ct{display:block!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch;width:100%!important;max-width:100%!important}
+td,th{word-break:break-word;min-width:50px}
+img{max-width:100%!important;height:auto}
+/* ── END TABLE FIX ── */
 </style>
 </head>
 <body><div class="banner-top">&#127482;&#127480; Manufacturer Direct &nbsp;|&nbsp; <strong>0% anti-dumping duty (Thailand mfg.)</strong> &nbsp;|&nbsp; PP Corrugated Products In Stock &nbsp;|&nbsp; 🇺🇸 USA Manufacturing Coming Soon &nbsp;|&nbsp; Manufactured in China, Vietnam &amp; Thailand</div>
@@ -169,7 +177,7 @@ html{overflow-x:hidden!important}body{overflow-x:hidden!important;max-width:100%
   <div class="section-inner">
     <div class="label">Why Switch</div>
     <h2>PP vs Wax Cardboard — Why Farms Are Switching</h2>
-    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;width:100%;max-width:100%"><table class="compare-table">
+    <table class="compare-table">
       <tr><th>Factor</th><th>Wax Cardboard Box</th><th>PP Corrugated Crate</th></tr>
       <tr><td>Reuse cycles</td><td class="no">1 (single-use) ✗</td><td class="yes">50+ ✓</td></tr>
       <tr><td>Moisture resistance</td><td class="maybe">Wax coating delays absorption ⚠</td><td class="yes">100% waterproof ✓</td></tr>
@@ -179,7 +187,7 @@ html{overflow-x:hidden!important}body{overflow-x:hidden!important;max-width:100%
       <tr><td>Custom color/print</td><td class="maybe">Limited ⚠</td><td class="yes">Full Pantone + print ✓</td></tr>
       <tr><td>Cold chain compatible</td><td class="maybe">Degrades in wet cold ⚠</td><td class="yes">Rated to −40°F ✓</td></tr>
       <tr><td>Stacking strength</td><td class="no">Reduces when wet ✗</td><td class="yes">Consistent dry or wet ✓</td></tr>
-    </table></div>
+    </table>
     <p>The economics of switching from wax cardboard to PP corrugated are straightforward at any meaningful volume. Wax boxes can't be recycled through standard OCC streams because the wax coating contaminates the pulp. PP is fully recyclable under resin code #5 at end of service life — a genuine sustainability advantage, not a marketing claim.</p>
   </div>
 </section>
@@ -187,7 +195,7 @@ html{overflow-x:hidden!important}body{overflow-x:hidden!important;max-width:100%
   <div class="section-inner">
     <div class="label">Applications</div>
     <h2>Crop-by-Crop Container Guide</h2>
-    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;width:100%;max-width:100%"><table class="compare-table">
+    <table class="compare-table">
       <tr><th>Crop Type</th><th>Recommended Container</th><th>Key Requirements</th><th>Color Code</th></tr>
       <tr><td><strong>Leafy greens</strong> (lettuce, spinach, kale)</td><td>Ventilated crate, max vent%</td><td>High airflow, cold chain compatible, light tare weight</td><td>Green</td></tr>
       <tr><td><strong>Tomatoes</strong></td><td>Solid-wall or low-vent crate</td><td>Cushioned base optional, smooth interior, stackable 6 high</td><td>Red</td></tr>
@@ -233,7 +241,7 @@ html{overflow-x:hidden!important}body{overflow-x:hidden!important;max-width:100%
   <div class="section-inner">
     <div class="label">Specifications</div>
     <h2>Specifications</h2>
-    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;width:100%;max-width:100%"><table class="compare-table">
+    <table class="compare-table">
       <tr><th>Specification</th><th>Value</th></tr>
       <tr><td>Material</td><td>PP corrugated twin-wall (3mm / 4mm / 5mm)</td></tr>
       <tr><td>Food Contact</td><td>FDA 21 CFR 177.1520 compliant</td></tr>
