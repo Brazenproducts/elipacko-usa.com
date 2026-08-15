@@ -102,25 +102,17 @@ footer a{color:rgba(255,255,255,.5)}
 @media(max-width:768px){.two-col,.hero-inner{grid-template-columns:1fr}.pg{grid-template-columns:1fr 1fr}}
 @media(max-width:480px){.pg{grid-template-columns:1fr}.hero{padding:36px 4%}}
 
-/* ── MOBILE NAV HAMBURGER ── */
-.nav-hamburger{display:none;background:none;border:none;cursor:pointer;padding:6px;flex-direction:column;gap:5px;align-items:center;justify-content:center}
-.nav-hamburger span{display:block;width:22px;height:2px;background:var(--navy,#0a2540);border-radius:2px;transition:all .25s}
-@media(max-width:768px){
-  .nav-hamburger{display:flex}
-  .nav-cta-top{display:none}
-  .nav-strip{display:none;border-top:1px solid var(--gray-border,#e2e8f0)}
-  .nav-strip.open{display:block}
-  .nav-strip ul{flex-direction:column;flex-wrap:nowrap;overflow:visible;padding:8px 0;gap:0}
-  .nav-strip a{padding:11px 20px;font-size:.9rem;border-radius:0;border-bottom:1px solid #f0f4f8;white-space:normal}
-  .nav-strip a:last-child{border-bottom:none}
-  .nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-  .nav-hamburger.open span:nth-child(2){opacity:0}
-  .nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-}
-@media(min-width:769px){
-  .nav-strip{display:block!important}
-  .nav-strip ul{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+
   .nav-strip ul::-webkit-scrollbar{display:none}
+}
+
+/* ── MOBILE NAV SCROLL STRIP ── */
+@media(max-width:768px){
+  .nav-strip{position:relative}
+  .nav-strip::after{content:'';position:absolute;right:0;top:0;bottom:0;width:40px;background:linear-gradient(to right,transparent,#fff);pointer-events:none;z-index:1}
+  .nav-strip ul{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;-ms-overflow-style:none;padding:4px 3%}
+  .nav-strip ul::-webkit-scrollbar{display:none}
+  .nav-strip a{font-size:.78rem;padding:6px 8px;white-space:nowrap}
 }
 </style>
 </head>
@@ -129,7 +121,6 @@ footer a{color:rgba(255,255,255,.5)}
   <div class="nav-top">
     <a href="../" class="nav-logo">Eli<span>packo</span> USA</a>
     <a href="../#contact" class="nav-cta-top">Get a Quote</a>
-    <button class="nav-hamburger" aria-label="Menu" onclick="this.classList.toggle('open');document.querySelector('.nav-strip').classList.toggle('open')"><span></span><span></span><span></span></button>
   </div>
   <div class="nav-strip"><ul><li><a href="../pp-corrugated-boxes/">PP Boxes</a></li><li><a href="../pp-gaylord-boxes/">Gaylords</a></li><li><a href="../pp-pallets/">Pallets</a></li><li><a href="../pp-containers/"class="active">Containers</a></li><li><a href="../pp-dividers/">Dividers</a></li><li><a href="../pp-trays/">Trays</a></li><li><a href="../pp-turnover-boxes/">Turnover Boxes</a></li><li><a href="../pp-ballot-boxes/">Ballot Boxes</a></li><li><a href="../pp-voting-booths/">Voting Booths</a></li><li><a href="../pp-post-office-boxes/">Post Office Boxes</a></li><li><a href="../storage-moving-boxes/">Storage Boxes</a></li><li><a href="../pp-meat-lugs/">Meat Lugs</a></li><li><a href="../pp-poultry-boxes/">Poultry Boxes</a></li><li><a href="../agriculture-packaging/">Produce Boxes</a></li><li><a href="../seafood-packaging/">Seafood Boxes</a></li><li><a href="../pp-corrugated-sheets/">PP Sheets</a></li></ul></div>
 </nav>
