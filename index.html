@@ -117,14 +117,14 @@ nav{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1px solid va
 .hero h1{font-size:clamp(1.4rem,3vw,2.2rem);font-weight:900;line-height:1.2;margin-bottom:10px;letter-spacing:-.02em}
 .hero h1 em{font-style:normal;color:#60a5fa}
 .hero-sub{font-size:.92rem;color:rgba(255,255,255,.8);margin-bottom:16px;max-width:700px;line-height:1.6}
-.hero-btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.hero-btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
 .btn-primary{background:var(--blue);color:#fff;padding:13px 28px;border-radius:8px;font-weight:700;font-size:.95rem;transition:background .2s,transform .15s;border:none;cursor:pointer}
 .btn-primary:hover{background:var(--blue-dark);transform:translateY(-1px)}
 .btn-outline-white{border:2px solid rgba(255,255,255,.4);color:#fff;padding:11px 26px;border-radius:8px;font-weight:600;font-size:.95rem;transition:all .2s}
 .btn-outline-white:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.7)}
-.hero-stat{text-align:left;min-width:80px}
-.hero-stat .num{font-size:1.2rem;font-weight:900;color:#60a5fa;line-height:1}
-.hero-stat .label{font-size:.7rem;color:rgba(255,255,255,.6);font-weight:500;margin-top:2px}
+.hero-stats{display:flex;flex-direction:row;flex-wrap:wrap;gap:8px 14px;margin-top:14px}.hero-stat{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border-radius:20px;padding:5px 12px}
+.hero-stat .num{font-size:.92rem;font-weight:900;color:#60a5fa;white-space:nowrap}
+.hero-stat .label{font-size:.78rem;color:rgba(255,255,255,.75);font-weight:500}
 .hero-imgs img{width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;background:rgba(255,255,255,.05);border-radius:8px;border:2px solid rgba(255,255,255,.1);padding:4px}
 .hero-imgs img:first-child{grid-column:1/-1}
 
@@ -256,7 +256,7 @@ footer{background:#060e1a;color:rgba(255,255,255,.55);padding:24px 5% 32px}
   .banner-top{padding:10px 4%;font-size:.82rem}
   .nav-strip ul{padding:3px 3%;gap:1px}
   .nav-strip a{font-size:.75rem;padding:5px 7px}
-  .nav-top{height:42px;padding:0 4%}
+  .nav-top{height:48px;padding:0 4%}
   .nav-logo{font-size:1rem}
   .nav-cta-top{font-size:.75rem;padding:6px 12px}
 }
@@ -279,6 +279,16 @@ html{overflow-x:hidden}body{overflow-x:hidden;max-width:100%}
   .nav-strip ul{flex-wrap:wrap!important;overflow:visible!important;padding:4px 2%!important;gap:3px!important;justify-content:flex-start}
   .nav-strip a{font-size:.72rem!important;padding:5px 7px!important;white-space:nowrap}
 }
+
+/* ── VIDEOS ── */
+.video-section{background:#f7f9fc}
+.video-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:24px}
+.video-card{background:#fff;border-radius:10px;overflow:hidden;border:1px solid #e2e8f0;transition:transform .2s,box-shadow .2s}
+.video-card:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,.1)}
+.video-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
+.video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+.video-card p{padding:10px 14px;font-size:.85rem;font-weight:600;color:#0a2540;margin:0}
+@media(max-width:600px){.video-grid{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -719,6 +729,26 @@ html{overflow-x:hidden}body{overflow-x:hidden;max-width:100%}
         <summary>What ports does Elipacko deliver to?</summary>
         <div class="faq-body">Direct door-to-door shipments to Los Angeles (LA/Long Beach), New Jersey (Port Newark/Elizabeth), and Savannah (Port of Savannah). Full logistics coordination is included in the quote — no need to arrange separate freight forwarding.</div>
       </details>
+    </div>
+  </div>
+</section>
+
+
+<!-- VIDEOS -->
+<section class="video-section" id="videos">
+  <div class="section-inner">
+    <div class="section-label">Factory &amp; Product Videos</div>
+    <h2>See Elipacko Manufacturing in Action</h2>
+    <p class="section-sub">Live factory footage, product demos, and quality control walkthroughs — direct from Elipacko's facilities in Thailand, Vietnam, and China.</p>
+    <div class="video-grid">
+      <div class="video-card"><div class="video-wrap"><iframe src="https://www.youtube.com/embed/NGktm6dXzgQ" loading="lazy" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen title="Elipacko PP corrugated manufacturing"></iframe></div><p>PP Corrugated Factory Overview</p></div>
+      <div class="video-card"><div class="video-wrap"><iframe src="https://www.youtube.com/embed/2MnwWOd8-fM" loading="lazy" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen title="Elipacko production line"></iframe></div><p>Production Line — Boxes &amp; Sheets</p></div>
+      <div class="video-card"><div class="video-wrap"><iframe src="https://www.youtube.com/embed/K8HTJpAJaLo" loading="lazy" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen title="Elipacko product demo"></iframe></div><p>Product Demo &amp; Quality Control</p></div>
+      <div class="video-card"><div class="video-wrap"><iframe src="https://www.youtube.com/embed/P9uBak6ZJQQ" loading="lazy" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen title="Elipacko gaylord boxes"></iframe></div><p>Gaylord Boxes &amp; Bulk Containers</p></div>
+      <div class="video-card"><div class="video-wrap"><iframe src="https://www.youtube.com/embed/SIY-PF2xO_4" loading="lazy" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen title="Elipacko agriculture packaging"></iframe></div><p>Agriculture &amp; Produce Packaging</p></div>
+      <div class="video-card"><div class="video-wrap"><iframe src="https://www.youtube.com/embed/Yc0g3c5allQ" loading="lazy" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen title="Elipacko cold chain packaging"></iframe></div><p>Cold Chain &amp; Seafood Boxes</p></div>
+      <div class="video-card"><div class="video-wrap"><iframe src="https://www.youtube.com/embed/e4ysog-JUFk" loading="lazy" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen title="Elipacko custom printing"></iframe></div><p>Custom Printing &amp; Branding</p></div>
+      <div class="video-card"><div class="video-wrap"><iframe src="https://www.youtube.com/embed/lcQ_j7OcwnQ" loading="lazy" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen title="Elipacko warehouse and shipping"></iframe></div><p>Warehouse &amp; Shipping Operations</p></div>
     </div>
   </div>
 </section>
