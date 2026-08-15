@@ -21,11 +21,11 @@ body{font-family:'Inter',system-ui,sans-serif;color:#1a2332;line-height:1.65;bac
 a{text-decoration:none;color:inherit}
 :root{--navy:#0a2540;--blue:#1a6bdb;--orange:#ea580c;--gray:#f7f9fc;--muted:#6b7a8d;--border:#e2e8f0}
 .banner-top{background:#f59e0b;color:#1a1a1a;text-align:center;padding:8px 5%;font-size:.82rem;font-weight:700}
-nav{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1px solid var(--border);box-shadow:0 1px 4px rgba(0,0,0,.06)}
+nav{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1px solid var(--border);overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.06)}
 .nav-top{display:flex;align-items:center;justify-content:space-between;height:48px;max-width:1280px;margin:0 auto;padding:0 5%}
 .nav-logo{font-weight:800;font-size:1.1rem;color:var(--navy);white-space:nowrap}
 .nav-logo span{color:var(--blue)}
-.nav-strip{background:#fff;border-top:1px solid var(--border)}
+.nav-strip{background:#fff;border-top:1px solid var(--border);overflow:hidden}
 .nav-strip ul{display:flex;flex-wrap:nowrap;list-style:none;padding:4px 5%;margin:0 auto;gap:2px;max-width:1280px}
 .nav-strip a{display:block;font-size:.8rem;font-weight:500;color:var(--muted);padding:6px 9px;white-space:nowrap;border-radius:4px;transition:color .15s,background .15s}
 .nav-strip a:hover,.nav-strip a.active{color:var(--blue);background:#eff6ff}
@@ -103,7 +103,7 @@ footer a{color:rgba(255,255,255,.5)}
 @media(max-width:768px){
   .nav-strip{position:relative}
   .nav-strip::after{content:'';position:absolute;right:0;top:0;bottom:0;width:40px;background:linear-gradient(to right,transparent,#fff);pointer-events:none;z-index:1}
-  .nav-strip ul{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;-ms-overflow-style:none;padding:4px 3%}
+  .nav-strip ul{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;-ms-overflow-style:none;padding:4px 3%;width:100%;max-width:100%}
   .nav-strip ul::-webkit-scrollbar{display:none}
   .nav-strip a{font-size:.78rem;padding:6px 8px;white-space:nowrap}
 }
