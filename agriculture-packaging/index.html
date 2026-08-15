@@ -41,7 +41,7 @@ nav{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1px solid va
 .btn-white{background:#fff;color:var(--navy);padding:12px 24px;border-radius:6px;font-weight:700;font-size:.9rem}
 .btn-outline-w{border:2px solid rgba(255,255,255,.5);color:#fff;padding:12px 24px;border-radius:6px;font-weight:600;font-size:.9rem}
 .hero-imgs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.hero-imgs img{width:100%;border-radius:8px;object-fit:cover}
+.hero-imgs img{width:100%;aspect-ratio:1/1;object-fit:contain;background:#fff;border-radius:8px}
 .hero-imgs img:first-child{grid-column:1/-1;aspect-ratio:16/9}
 .hero-imgs img:not(:first-child){aspect-ratio:4/3}
 .toc{background:#f0f9ff;border:1px solid #bae6fd;border-radius:10px;padding:20px 24px;margin:32px 0}
@@ -151,6 +151,12 @@ section[style*="background:var(--navy)"]>*{color:#fff!important}
 .hero-stat{display:inline-flex!important;align-items:center!important;gap:5px!important;width:auto!important;flex:0 0 auto!important}
 .hero-stat .num{color:#60a5fa!important;font-size:.92rem!important;font-weight:900!important}
 .hero-stat .label{color:rgba(255,255,255,.8)!important;font-size:.78rem!important}
+
+
+.btn-white{background:#fff!important;color:#0a2540!important}
+.btn-white:hover{background:#f0f4ff!important;color:#0a2540!important}
+.btn-white{background:#fff!important;color:#0a2540!important}
+.btn-white:hover{background:#e8efff!important;color:#0a2540!important}
 /* ── END DARK BG OVERRIDES ── */
 
 
