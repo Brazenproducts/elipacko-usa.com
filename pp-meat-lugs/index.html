@@ -18,6 +18,149 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
+/* ── RESET & BASE ── */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden}
+:root{
+  --green-primary:#227e3a;
+  --green-topbar:#027a53;
+  --green-dark:#1a6030;
+  --green-light:#f0fdf4;
+  --white:#ffffff;
+  --black:#000000;
+  --gray-light:#f5f5f5;
+  --text-dark:#1a1a1a;
+  --text-muted:#6b7a8d;
+  --border:#e2e8f0;
+}
+body{font-family:'Albert Sans',sans-serif;color:var(--text-dark);line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block;height:auto}
+
+/* ── TOP INFO BAR ── */
+.top-bar{
+  background:var(--green-topbar);
+  color:#fff;
+  padding:8px 5%;
+  font-size:.82rem;
+  font-weight:500;
+}
+.top-bar-inner{
+  max-width:1280px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.top-bar-left{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+.top-bar-left a{
+  color:#fff;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  transition:opacity .15s;
+}
+.top-bar-left a:hover{opacity:.8}
+.top-bar-right{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.social-circle{
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.45);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  transition:background .2s,border-color .2s;
+}
+.social-circle:hover{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.8)}
+.social-circle svg{width:13px;height:13px;fill:currentColor}
+
+/* ── MAIN NAV ── */
+.main-nav{
+  background:#fff;
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
+  position:sticky;
+  top:0;
+  z-index:200;
+}
+.main-nav-inner{
+  max-width:1280px;
+  margin:0 auto;
+  padding:0 5%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:72px;
+  gap:16px;
+}
+.nav-logo-img{
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  object-fit:contain;
+  flex-shrink:0;
+}
+.main-nav-links{
+  display:flex;
+  align-items:center;
+  gap:4px;
+  list-style:none;
+  flex-wrap:nowrap;
+}
+.main-nav-links li a{
+  font-family:'Urbanist',sans-serif;
+  font-size:.9rem;
+  font-weight:600;
+  color:var(--text-dark);
+  padding:8px 14px;
+  border-radius:6px;
+  transition:color .15s,background .15s;
+  white-space:nowrap;
+}
+.main-nav-links li a:hover{color:var(--green-primary);background:var(--green-light)}
+.nav-quote-btn{
+  background:var(--green-primary);
+  color:#fff !important;
+  padding:9px 18px !important;
+  border-radius:6px !important;
+  font-weight:700 !important;
+  transition:background .2s !important;
+}
+.nav-quote-btn:hover{background:var(--green-dark) !important;color:#fff !important}
+/* Hamburger */
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--text-dark);border-radius:2px;transition:all .3s}
+.mobile-menu{display:none;background:#fff;border-top:1px solid var(--border);padding:16px 5%}
+.mobile-menu.open{display:block}
+.mobile-menu ul{list-style:none}
+.mobile-menu ul li a{display:block;padding:10px 0;font-weight:600;color:var(--text-dark);border-bottom:1px solid var(--border);font-size:.92rem}
+.mobile-menu ul li:last-child a{border-bottom:none}
+
+/* ── PRODUCTS DROPDOWN ── */
+.nav-has-dropdown{position:relative}
+.nav-dropdown-trigger{display:flex;align-items:center;gap:4px;cursor:pointer}
+.nav-caret{font-size:.7em;transition:transform .2s}
+.nav-has-dropdown:hover .nav-caret{transform:rotate(180deg)}
+.nav-dropdown{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid #e5e7eb;border-radius:0 0 6px 6px;box-shadow:0 8px 32px rgba(0,0,0,.12);min-width:520px;z-index:9999;padding:8px 16px 16px;grid-template-columns:1fr 1fr;gap:0 24px}
+.nav-has-dropdown:hover .nav-dropdown{display:grid}
+.nav-has-dropdown .nav-dropdown:hover{display:grid}
+.nav-dropdown-cat{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#027a53;padding:10px 0 4px;border-top:1px solid #f0f0f0;margin-top:4px}
+.nav-dropdown-cat:first-child{border-top:none;margin-top:0;padding-top:0}
+.nav-dropdown a{display:block;padding:5px 0;font-size:.875rem;color:#333;transition:color .15s}
+.nav-dropdown a:hover{color:#227e3a}
+
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Inter',sans-serif;color:#1a2332;line-height:1.65;background:#fff}
 a{text-decoration:none;color:inherit}
@@ -27,25 +170,7 @@ nav{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1px solid va
 .nav-top{display:flex;align-items:center;justify-content:space-between;height:48px;max-width:1280px;margin:0 auto;padding:0 5%}
 .nav-logo{font-weight:800;font-size:1.1rem;color:var(--navy);white-space:nowrap}
 .nav-logo span{color:var(--blue)}
-.nav-strip{background:#fff;border-top:1px solid var(--border);overflow:visible}
-.nav-strip ul{display:block;padding:4px 3%;margin:0;list-style:none;line-height:1}
-.nav-strip li{display:inline-block}.nav-strip a{display:inline-block;font-size:.75rem;font-weight:500;color:var(--muted,#6b7a8d);padding:5px 8px;white-space:nowrap;border-radius:4px;text-decoration:none;margin:2px 1px;transition:color .15s,background .15s}
-.nav-strip a:hover,.nav-strip a.active{color:var(--blue);background:#eff6ff}
-.nav-cta-top{background:var(--blue);color:#fff;padding:8px 18px;border-radius:6px;font-weight:600;font-size:.82rem}
-.breadcrumb{background:var(--gray);padding:10px 5%;font-size:.82rem;color:var(--muted)}
-.breadcrumb a{color:var(--blue)}
-.hero{color:#fff;padding:56px 5%}
-.hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.hero-badge{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:5px 14px;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
-.hero h1{font-size:clamp(1.8rem,3.5vw,2.7rem);font-weight:800;line-height:1.15;margin-bottom:14px}
-.hero p{color:rgba(255,255,255,.88);font-size:1rem;margin-bottom:24px;max-width:480px}
-.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn-white{background:#fff;color:var(--navy);padding:12px 24px;border-radius:6px;font-weight:700;font-size:.9rem}
-.btn-outline-w{border:2px solid rgba(255,255,255,.5);color:#fff;padding:12px 24px;border-radius:6px;font-weight:600;font-size:.9rem}
-.hero-imgs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.hero-imgs img{width:100%;aspect-ratio:1/1;object-fit:contain;background:#fff;border-radius:8px}
-.hero-imgs img:first-child{grid-column:1/-1;aspect-ratio:16/9}
-.hero-imgs img:not(:first-child){aspect-ratio:4/3}
+
 /* ToC */
 .toc{background:#f0f9ff;border:1px solid #bae6fd;border-radius:10px;padding:20px 24px;margin:32px 0}
 .toc h3{font-size:.88rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#0369a1;margin-bottom:12px}
@@ -108,8 +233,7 @@ footer a{color:rgba(255,255,255,.5)}
 @media(max-width:480px){.hero{padding:36px 4%}.photo-gallery{grid-template-columns:1fr}}
 
 
-  .nav-strip ul::-webkit-scrollbar{display:none}
-}
+  
 
 
 }
@@ -126,13 +250,7 @@ img{max-width:100%!important;height:auto}
 
 @media(max-width:768px){
   .banner-top{font-size:.7rem!important;padding:6px 3%!important;line-height:1.4}
-  .nav-strip ul{display:grid!important;grid-template-columns:repeat(4,1fr)!important;gap:0!important;padding:0!important;margin:0!important}
-  .nav-strip li{display:block!important}
-  .nav-strip a{display:block!important;text-align:center!important;font-size:.62rem!important;padding:7px 2px!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;border-radius:0!important;border-bottom:1px solid #e2e8f0;border-right:1px solid #e2e8f0}
-  .nav-strip a.active,.nav-strip a:hover{background:#eff6ff!important;color:#1a6bdb!important}
-  .hero-stats{display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;gap:6px!important;margin-top:12px!important}
-  .hero-stat{flex:0 0 auto!important;width:auto!important}
-}
+  
 
 
 /* ── CANONICAL TYPOGRAPHY (override all per-page variations) ── */
@@ -186,34 +304,123 @@ section[style*="background:var(--navy)"]>*{color:#fff!important}
 
 </style>
 </head>
-<body><div class="banner-top">&#127482;&#127480; Manufacturer Direct &nbsp;|&nbsp; <strong>0% anti-dumping duty (Thailand mfg.)</strong> &nbsp;|&nbsp; PP Corrugated Products In Stock &nbsp;|&nbsp; 🇺🇸 USA Manufacturing Coming Soon &nbsp;|&nbsp; Manufactured in China, Vietnam &amp; Thailand</div>
-<nav>
-  <div class="nav-top">
-    <a href="../" class="nav-logo">Eli<span>packo</span> USA</a>
-    <a href="../#contact" class="nav-cta-top">Get a Quote</a>
+
+<body>
+
+<!-- TOP INFO BAR -->
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="top-bar-left">
+      <a href="tel:+19295447864">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        +1-929-544-7864
+      </a>
+      <a href="mailto:sales@elipacko.com">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        sales@elipacko.com
+      </a>
+    </div>
+    <div class="top-bar-right">
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/elipacko" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+      </a>
+      <!-- X / Twitter -->
+      <a href="https://x.com/elipacko" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="X (Twitter)">
+        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/elipacko" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+      <!-- YouTube -->
+      <a href="https://www.youtube.com/@elipacko" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="YouTube">
+        <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+      </a>
+      <!-- Pinterest -->
+      <a href="https://www.pinterest.com/elipacko" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="Pinterest">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.598-.299-1.482c0-1.388.806-2.428 1.808-2.428.853 0 1.267.641 1.267 1.408 0 .858-.546 2.141-.828 3.329-.236.995.499 1.806 1.476 1.806 1.772 0 2.973-2.283 2.973-4.988 0-2.064-1.373-3.578-3.833-3.578-2.79 0-4.522 2.086-4.522 4.406 0 .797.235 1.36.6 1.788a.24.24 0 01.055.23c-.061.253-.197.795-.224.907-.035.146-.145.197-.334.119-1.249-.514-1.83-1.891-1.83-3.437 0-2.552 2.149-5.623 6.41-5.623 3.444 0 5.717 2.498 5.717 5.183 0 3.559-1.965 6.188-4.867 6.188-.973 0-1.889-.527-2.203-1.118l-.599 2.308c-.218.84-.807 1.888-1.201 2.525.905.279 1.865.43 2.861.43 5.522 0 10-4.478 10-10S17.522 2 12 2z"/></svg>
+      </a>
+    </div>
   </div>
-  <div class="nav-strip">
+</div>
+
+<!-- MAIN NAV -->
+<nav class="main-nav">
+  <div class="main-nav-inner">
+    <a href=".././" aria-label="Elipacko Home">
+      <img src="https://mediumturquoise-wildcat-116292.hostingersite.com/wp-content/uploads/2025/10/logo-main.png" alt="Elipacko Logo" class="nav-logo-img">
+    </a>
+    <ul class="main-nav-links">
+      <li class="nav-has-dropdown">
+        <a href="#" class="nav-dropdown-trigger">Products <span class="nav-caret">▾</span></a>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-col">
+            <div class="nav-dropdown-cat">Agriculture</div>
+            <a href="../agriculture-packaging/">Produce Boxes</a>
+            <a href="../pp-poultry-boxes/">Poultry Boxes</a>
+            <a href="../pp-trays/">PP Trays</a>
+            <div class="nav-dropdown-cat">Seafood</div>
+            <a href="../seafood-packaging/">Seafood Boxes</a>
+            <a href="../pp-meat-lugs/">Meat Lugs</a>
+            <div class="nav-dropdown-cat">Frozen Food</div>
+            <a href="../cold-chain-packaging/">Cold Chain Packaging</a>
+          </div>
+          <div class="nav-dropdown-col">
+            <div class="nav-dropdown-cat">Shipping &amp; Mailer Boxes</div>
+            <a href="../pp-corrugated-boxes/">PP Corrugated Boxes</a>
+            <a href="../pp-post-office-boxes/">Post Office Boxes</a>
+            <div class="nav-dropdown-cat">Storage &amp; Moving Boxes</div>
+            <a href="../storage-moving-boxes/">Storage Boxes</a>
+            <a href="../pp-gaylord-boxes/">Gaylord Boxes</a>
+            <a href="../pp-turnover-boxes/">Turnover Boxes</a>
+            <div class="nav-dropdown-cat">Display &amp; POS Solutions</div>
+            <a href="../pp-ballot-boxes/">Ballot Boxes</a>
+            <a href="../pp-containers/">Containers</a>
+            <div class="nav-dropdown-cat">Customized Solutions</div>
+            <a href="../pp-corrugated-sheets/">PP Sheets</a>
+            <a href="../pp-dividers/">PP Dividers</a>
+            <a href="../pp-pallets/">PP Pallets</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="#why-elipacko">0% Duty</a></li>
+      <li><a href="#contact">Company</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="nav-quote-btn">Request A Quote</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
     <ul>
-      <li><a href="../pp-corrugated-boxes/">PP Boxes</a></li>
-      <li><a href="../pp-gaylord-boxes/">Gaylords</a></li>
-      <li><a href="../pp-pallets/">Pallets</a></li>
-      <li><a href="../pp-containers/">Containers</a></li>
-      <li><a href="../pp-dividers/">Dividers</a></li>
-      <li><a href="../pp-trays/">Trays</a></li>
-      <li><a href="../pp-turnover-boxes/">Turnover Boxes</a></li>
-      <li><a href="../pp-ballot-boxes/">Ballot Boxes</a></li>
-      <li><a href="../pp-voting-booths/">Voting Booths</a></li>
-      <li><a href="../pp-post-office-boxes/">Post Office Boxes</a></li>
-      <li><a href="../storage-moving-boxes/">Storage Boxes</a></li>
-      <li><a href="../pp-meat-lugs/"class='active'>Meat Lugs</a></li>
-      <li><a href="../pp-poultry-boxes/">Poultry Boxes</a></li>
+      <li class="mobile-cat-label">— Products —</li>
       <li><a href="../agriculture-packaging/">Produce Boxes</a></li>
+      <li><a href="../pp-poultry-boxes/">Poultry Boxes</a></li>
       <li><a href="../seafood-packaging/">Seafood Boxes</a></li>
+      <li><a href="../pp-meat-lugs/">Meat Lugs</a></li>
+      <li><a href="../pp-corrugated-boxes/">PP Corrugated Boxes</a></li>
+      <li><a href="../pp-gaylord-boxes/">Gaylord Boxes</a></li>
+      <li><a href="../storage-moving-boxes/">Storage Boxes</a></li>
       <li><a href="../pp-corrugated-sheets/">PP Sheets</a></li>
+      <li><a href="../pp-pallets/">PP Pallets</a></li>
+      <li><a href="#why-elipacko">0% Duty</a></li>
+      <li><a href="#contact">Company</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" style="color:var(--green-primary);font-weight:700">Request A Quote</a></li>
     </ul>
   </div>
+
 </nav>
-<div class="breadcrumb"><a href="../">Home</a> › PP Meat Lugs</div>
+
+<!-- USA BANNER -->
+<div class="usa-banner">
+  <span class="usa-flag">🇺🇸</span>
+  <span class="usa-text"><strong>USA Manufacturing Coming Soon</strong> — Domestic production underway. Zero import duties. Faster lead times.</span>
+  <span class="usa-flag">🇺🇸</span>
+</div>
 
 <section class="hero" style="background:linear-gradient(135deg,#3b0f0f,#7f1d1d)">
   <div class="hero-inner">
