@@ -248,7 +248,8 @@ img{max-width:100%;display:block;height:auto}
 .hero-btn-primary:hover{background:var(--green-dark);transform:translateY(-2px)}
 .hero-btn-outline{
   border:2px solid #fff;
-  color:#fff;
+  color:#0a2540;
+  background:#fff;
   padding:12px 30px;
   border-radius:8px;
   font-weight:700;
@@ -256,7 +257,7 @@ img{max-width:100%;display:block;height:auto}
   font-family:'Urbanist',sans-serif;
   transition:background .2s,transform .15s;
 }
-.hero-btn-outline:hover{background:rgba(255,255,255,.15);transform:translateY(-2px)}
+.hero-btn-outline:hover{background:#e8f4ff;color:#0a2540;transform:translateY(-2px)}
 /* ── BUTTONS ── */
 .btn-white,.btn-outline-w{display:inline-block;padding:12px 28px;border-radius:6px;font-weight:700;font-size:.92rem;text-decoration:none;cursor:pointer;transition:background .2s,transform .15s;border:none}
 .btn-white{background:#fff!important;color:#0a2540!important;border:none!important}
