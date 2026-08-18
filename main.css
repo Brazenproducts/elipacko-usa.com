@@ -238,13 +238,14 @@ img{max-width:100%;display:block;height:auto}
   transition:background .2s,transform .15s;
 }
 .hero-btn-outline:hover{background:rgba(255,255,255,.15);transform:translateY(-2px)}
-/* Buttons in hero — must override hero *{color:#fff} */
-.btn-white{background:#fff!important;color:#0a2540!important;border:none}
-.btn-white:hover{background:#f0f4ff!important;color:#0a2540!important}
-.btn-outline-w{background:transparent!important;color:#fff!important;border:2px solid #fff!important}
-.btn-outline-w:hover{background:rgba(255,255,255,.15)!important;color:#fff!important}
-.hero a.btn-white,.hero-inner a.btn-white{color:#0a2540!important}
-.hero a.btn-outline-w,.hero-inner a.btn-outline-w{color:#fff!important}
+/* ── BUTTONS ── */
+.btn-white,.btn-outline-w{display:inline-block;padding:12px 28px;border-radius:6px;font-weight:700;font-size:.92rem;text-decoration:none;cursor:pointer;transition:background .2s,transform .15s;border:none}
+.btn-white{background:#fff!important;color:#0a2540!important;border:none!important}
+.btn-white:hover{background:#f0f4ff!important;color:#0a2540!important;transform:translateY(-1px)}
+.btn-outline-w{background:transparent!important;color:#fff!important;border:2px solid rgba(255,255,255,.8)!important}
+.btn-outline-w:hover{background:rgba(255,255,255,.15)!important;color:#fff!important;transform:translateY(-1px)}
+a.btn-white,a.btn-white:visited{color:#0a2540!important}
+a.btn-outline-w,a.btn-outline-w:visited{color:#fff!important}
 /* Hero images — no stretching */
 .hero-imgs{width:100%;margin-top:16px}
 .hero-imgs img{width:100%;height:auto;object-fit:contain;max-height:320px;border-radius:8px}
