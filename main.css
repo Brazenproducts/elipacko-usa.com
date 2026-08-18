@@ -142,8 +142,10 @@ img{max-width:100%;display:block;height:auto}
 .nav-dropdown a:hover{color:#227e3a}
 
 /* ── HERO ── */
-.usa-banner{background:#fff;color:#002868;text-align:center;padding:8px 5%;font-size:.82rem;border-bottom:2px solid #B22234;line-height:1.4}
-.usa-banner strong{color:#B22234;font-weight:800}
+.usa-banner{background:#fff;color:#002868;text-align:center;padding:8px 5%;border-bottom:2px solid #B22234;line-height:1.5}
+.usa-banner-line1{font-size:.88rem;font-weight:700}
+.usa-banner-line1 strong{color:#B22234;font-weight:800}
+.usa-banner-line2{font-size:.76rem;color:#555;margin-top:1px}
 .hero{
   position:relative;
   min-height:100vh;
