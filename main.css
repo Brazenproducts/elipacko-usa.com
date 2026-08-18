@@ -93,6 +93,8 @@ img{max-width:100%;display:block;height:auto}
   object-fit:contain;
   flex-shrink:0;
 }
+.nav-logo-wrap{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-logo-name{font-family:'Urbanist',sans-serif;font-weight:900;font-size:1.35rem;color:#1a1a1a;letter-spacing:.06em;white-space:nowrap}
 .main-nav-links{
   display:flex;
   align-items:center;
