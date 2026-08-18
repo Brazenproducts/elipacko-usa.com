@@ -214,8 +214,7 @@ img{max-width:100%;display:block;height:auto}
 .nav-caret{font-size:.7em;transition:transform .2s}
 .nav-has-dropdown:hover .nav-caret{transform:rotate(180deg)}
 .nav-dropdown{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid #e5e7eb;border-radius:0 0 6px 6px;box-shadow:0 8px 32px rgba(0,0,0,.12);min-width:520px;z-index:9999;padding:8px 16px 16px;grid-template-columns:1fr 1fr;gap:0 24px}
-.nav-has-dropdown:hover .nav-dropdown{display:grid}
-.nav-has-dropdown .nav-dropdown:hover{display:grid}
+/* dropdown controlled by JS only */
 .nav-dropdown-cat{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#027a53;padding:10px 0 4px;border-top:1px solid #f0f0f0;margin-top:4px}
 .nav-dropdown-cat:first-child{border-top:none;margin-top:0;padding-top:0}
 .nav-dropdown a{display:block;padding:5px 0;font-size:.875rem;color:#333;transition:color .15s}
@@ -977,24 +976,25 @@ footer{
   }
 })();
 
-// Products dropdown — click to open, click outside to close
+// Products dropdown — JS only, 200ms grace period
 (function(){
-  var trigger = document.querySelector('.nav-dropdown-trigger');
+  var parent = document.querySelector('.nav-has-dropdown');
   var dropdown = document.querySelector('.nav-dropdown');
-  if(!trigger || !dropdown) return;
+  var trigger = document.querySelector('.nav-dropdown-trigger');
+  if(!parent || !dropdown || !trigger) return;
+  var closeTimer;
+  function open(){ clearTimeout(closeTimer); dropdown.style.display='grid'; }
+  function close(){ closeTimer = setTimeout(function(){ dropdown.style.display='none'; }, 200); }
+  parent.addEventListener('mouseenter', open);
+  parent.addEventListener('mouseleave', close);
+  dropdown.addEventListener('mouseenter', open);
+  dropdown.addEventListener('mouseleave', close);
   trigger.addEventListener('click', function(e){
     e.preventDefault();
-    var isOpen = dropdown.style.display === 'grid';
-    dropdown.style.display = isOpen ? 'none' : 'grid';
+    dropdown.style.display === 'grid' ? close() : open();
   });
   document.addEventListener('click', function(e){
-    if(!trigger.contains(e.target) && !dropdown.contains(e.target)){
-      dropdown.style.display = 'none';
-    }
-  });
-  // Keep CSS hover working on desktop too
-  trigger.closest('.nav-has-dropdown').addEventListener('mouseleave', function(){
-    dropdown.style.display = '';
+    if(!parent.contains(e.target)){ clearTimeout(closeTimer); dropdown.style.display='none'; }
   });
 })();
 </script>
