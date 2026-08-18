@@ -976,6 +976,27 @@ footer{
     });
   }
 })();
+
+// Products dropdown — click to open, click outside to close
+(function(){
+  var trigger = document.querySelector('.nav-dropdown-trigger');
+  var dropdown = document.querySelector('.nav-dropdown');
+  if(!trigger || !dropdown) return;
+  trigger.addEventListener('click', function(e){
+    e.preventDefault();
+    var isOpen = dropdown.style.display === 'grid';
+    dropdown.style.display = isOpen ? 'none' : 'grid';
+  });
+  document.addEventListener('click', function(e){
+    if(!trigger.contains(e.target) && !dropdown.contains(e.target)){
+      dropdown.style.display = 'none';
+    }
+  });
+  // Keep CSS hover working on desktop too
+  trigger.closest('.nav-has-dropdown').addEventListener('mouseleave', function(){
+    dropdown.style.display = '';
+  });
+})();
 </script>
 
 </body>
