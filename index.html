@@ -208,34 +208,17 @@ img{max-width:100%;display:block;height:auto}
 .mobile-menu ul li a{display:block;padding:10px 0;font-weight:600;color:var(--text-dark);border-bottom:1px solid var(--border);font-size:.92rem}
 .mobile-menu ul li:last-child a{border-bottom:none}
 
-/* ── NAV STRIP (product tab links — green theme) ── */
-.nav-strip{
-  background:var(--green-primary);
-  border-top:1px solid rgba(255,255,255,.15);
-}
-.nav-strip ul{
-  max-width:1280px;
-  margin:0 auto;
-  padding:0 3%;
-  list-style:none;
-  display:flex;
-  flex-wrap:wrap;
-  gap:0;
-}
-.nav-strip li{display:inline-block}
-.nav-strip a{
-  display:inline-block;
-  font-size:.75rem;
-  font-weight:600;
-  color:rgba(255,255,255,.85);
-  padding:7px 10px;
-  white-space:nowrap;
-  border-radius:4px;
-  text-decoration:none;
-  margin:3px 2px;
-  transition:color .15s,background .15s;
-}
-.nav-strip a:hover{color:#fff;background:rgba(255,255,255,.15)}
+/* ── PRODUCTS DROPDOWN ── */
+.nav-has-dropdown{position:relative}
+.nav-dropdown-trigger{display:flex;align-items:center;gap:4px;cursor:pointer}
+.nav-caret{font-size:.7em;transition:transform .2s}
+.nav-has-dropdown:hover .nav-caret{transform:rotate(180deg)}
+.nav-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;background:#fff;border:1px solid #e5e7eb;border-radius:6px;box-shadow:0 8px 32px rgba(0,0,0,.12);min-width:520px;z-index:9999;padding:16px;display:none;grid-template-columns:1fr 1fr;gap:0 24px}
+.nav-has-dropdown:hover .nav-dropdown{display:grid}
+.nav-dropdown-cat{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#027a53;padding:10px 0 4px;border-top:1px solid #f0f0f0;margin-top:4px}
+.nav-dropdown-cat:first-child{border-top:none;margin-top:0;padding-top:0}
+.nav-dropdown a{display:block;padding:5px 0;font-size:.875rem;color:#333;transition:color .15s}
+.nav-dropdown a:hover{color:#227e3a}
 
 /* ── HERO ── */
 .usa-banner{background:#fff;color:#002868;text-align:center;padding:10px 5%;font-size:.88rem;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;border-bottom:2px solid #B22234}
@@ -613,8 +596,6 @@ footer{
   .video-grid{grid-template-columns:1fr 1fr}
   .form-row{grid-template-columns:1fr}
   .top-bar-right{display:none}
-  .nav-strip ul{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-  .nav-strip ul::-webkit-scrollbar{display:none}
   .hero-logo{width:140px;height:140px}
 }
 @media(max-width:540px){
@@ -626,6 +607,7 @@ footer{
   .main-nav-inner{height:60px}
   .nav-logo-img{width:44px;height:44px}
 }
+.mobile-cat-label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#027a53;padding:10px 0 2px}
 </style>
 </head>
 <body>
@@ -675,7 +657,38 @@ footer{
       <img src="https://mediumturquoise-wildcat-116292.hostingersite.com/wp-content/uploads/2025/10/logo-main.png" alt="Elipacko Logo" class="nav-logo-img">
     </a>
     <ul class="main-nav-links">
-      <li><a href="pp-corrugated-boxes/">Product</a></li>
+      <li class="nav-has-dropdown">
+        <a href="#" class="nav-dropdown-trigger">Products <span class="nav-caret">▾</span></a>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-col">
+            <div class="nav-dropdown-cat">Agriculture</div>
+            <a href="agriculture-packaging/">Produce Boxes</a>
+            <a href="pp-poultry-boxes/">Poultry Boxes</a>
+            <a href="pp-trays/">PP Trays</a>
+            <div class="nav-dropdown-cat">Seafood</div>
+            <a href="seafood-packaging/">Seafood Boxes</a>
+            <a href="pp-meat-lugs/">Meat Lugs</a>
+            <div class="nav-dropdown-cat">Frozen Food</div>
+            <a href="cold-chain-packaging/">Cold Chain Packaging</a>
+          </div>
+          <div class="nav-dropdown-col">
+            <div class="nav-dropdown-cat">Shipping &amp; Mailer Boxes</div>
+            <a href="pp-corrugated-boxes/">PP Corrugated Boxes</a>
+            <a href="pp-post-office-boxes/">Post Office Boxes</a>
+            <div class="nav-dropdown-cat">Storage &amp; Moving Boxes</div>
+            <a href="storage-moving-boxes/">Storage Boxes</a>
+            <a href="pp-gaylord-boxes/">Gaylord Boxes</a>
+            <a href="pp-turnover-boxes/">Turnover Boxes</a>
+            <div class="nav-dropdown-cat">Display &amp; POS Solutions</div>
+            <a href="pp-ballot-boxes/">Ballot Boxes</a>
+            <a href="pp-containers/">Containers</a>
+            <div class="nav-dropdown-cat">Customized Solutions</div>
+            <a href="pp-corrugated-sheets/">PP Sheets</a>
+            <a href="pp-dividers/">PP Dividers</a>
+            <a href="pp-pallets/">PP Pallets</a>
+          </div>
+        </div>
+      </li>
       <li><a href="#why-elipacko">0% Duty</a></li>
       <li><a href="#contact">Company</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -688,33 +701,23 @@ footer{
   <!-- Mobile menu -->
   <div class="mobile-menu" id="mobileMenu">
     <ul>
-      <li><a href="pp-corrugated-boxes/">Product</a></li>
+      <li class="mobile-cat-label">— Products —</li>
+      <li><a href="agriculture-packaging/">Produce Boxes</a></li>
+      <li><a href="pp-poultry-boxes/">Poultry Boxes</a></li>
+      <li><a href="seafood-packaging/">Seafood Boxes</a></li>
+      <li><a href="pp-meat-lugs/">Meat Lugs</a></li>
+      <li><a href="pp-corrugated-boxes/">PP Corrugated Boxes</a></li>
+      <li><a href="pp-gaylord-boxes/">Gaylord Boxes</a></li>
+      <li><a href="storage-moving-boxes/">Storage Boxes</a></li>
+      <li><a href="pp-corrugated-sheets/">PP Sheets</a></li>
+      <li><a href="pp-pallets/">PP Pallets</a></li>
       <li><a href="#why-elipacko">0% Duty</a></li>
       <li><a href="#contact">Company</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="#contact" style="color:var(--green-primary);font-weight:700">Request A Quote</a></li>
     </ul>
   </div>
-  <!-- NAV STRIP — product sub-page links -->
-  <div class="nav-strip">
-    <ul>
-      <li><a href="pp-corrugated-boxes/">PP Boxes</a></li>
-      <li><a href="pp-gaylord-boxes/">Gaylords</a></li>
-      <li><a href="pp-pallets/">Pallets</a></li>
-      <li><a href="pp-containers/">Containers</a></li>
-      <li><a href="pp-dividers/">Dividers</a></li>
-      <li><a href="pp-trays/">Trays</a></li>
-      <li><a href="pp-turnover-boxes/">Turnover Boxes</a></li>
-      <li><a href="pp-ballot-boxes/">Ballot Boxes</a></li>
-      <li><a href="pp-post-office-boxes/">Post Office Boxes</a></li>
-      <li><a href="storage-moving-boxes/">Storage Boxes</a></li>
-      <li><a href="pp-meat-lugs/">Meat Lugs</a></li>
-      <li><a href="pp-poultry-boxes/">Poultry Boxes</a></li>
-      <li><a href="agriculture-packaging/">Produce Boxes</a></li>
-      <li><a href="seafood-packaging/">Seafood Boxes</a></li>
-      <li><a href="pp-corrugated-sheets/">PP Sheets</a></li>
-    </ul>
-  </div>
+
 </nav>
 
 <!-- USA BANNER -->
