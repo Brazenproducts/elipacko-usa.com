@@ -148,6 +148,7 @@ img{max-width:100%;display:block;height:auto}
 .usa-banner-line2{font-size:.76rem;color:#555;margin-top:1px}
 .hero{
   position:relative;
+  background:linear-gradient(135deg,#14532d,#16a34a);
   min-height:520px;
   display:flex;
   align-items:center;
