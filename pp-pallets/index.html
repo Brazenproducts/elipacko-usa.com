@@ -301,6 +301,27 @@ section[style*="background:var(--navy)"]>*{color:#fff!important}
   .hero-btns a{flex:1 1 auto!important;text-align:center!important;min-width:130px!important}
 }
 
+
+/* ── TEXT COLOR FIXES ── */
+/* Hero: always white, override global h1/h2/h3 !important rules */
+.hero h1,.hero h2,.hero h3,.hero h4,.hero p,.hero li,
+.hero-inner h1,.hero-inner h2,.hero-inner h3,.hero-inner p,
+.hero-label,.hero .label,.hero-sub,.hero-badge,
+section.hero *:not(.btn-primary):not(.btn-white):not(button){color:#fff!important}
+.hero p,.hero .hero-sub,.hero-inner p{color:rgba(255,255,255,.85)!important}
+.hero a:not(.btn-primary):not(.btn-white){color:rgba(255,255,255,.85)!important}
+/* Compliance/navy sections: white text */
+.compliance *,.compliance h2,.compliance h3,.compliance p{color:#fff!important}
+/* CTA bar */
+.cta-bar *,.cta-bar h2,.cta-bar p{color:#fff!important}
+/* Trust bar */
+.trust-bar,.trust-item{color:#fff!important}
+/* Global h tags — remove navy, use dark text */
+h1:not(.hero h1):not(.hero-inner h1){color:var(--text-dark,#1a1a1a)!important}
+h2:not(.hero h2):not(.hero-inner h2){color:var(--text-dark,#1a1a1a)!important}
+h3:not(.hero h3){color:var(--text-dark,#1a1a1a)!important}
+h4:not(.hero h4){color:var(--text-dark,#1a1a1a)!important}
+
 </style>
 </head>
 
