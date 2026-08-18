@@ -439,5 +439,39 @@ h4:not(.hero h4){color:var(--text-dark,#1a1a1a)!important}
 </footer>
 
 
+<script>
+// Hamburger toggle
+(function(){
+  var btn = document.getElementById('hamburgerBtn');
+  var menu = document.getElementById('mobileMenu');
+  if(btn && menu){
+    btn.addEventListener('click', function(){
+      menu.classList.toggle('open');
+    });
+  }
+})();
+
+// Products dropdown — JS only, 200ms grace period
+(function(){
+  var parent = document.querySelector('.nav-has-dropdown');
+  var dropdown = document.querySelector('.nav-dropdown');
+  var trigger = document.querySelector('.nav-dropdown-trigger');
+  if(!parent || !dropdown || !trigger) return;
+  var closeTimer;
+  function open(){ clearTimeout(closeTimer); dropdown.style.display='grid'; }
+  function close(){ closeTimer = setTimeout(function(){ dropdown.style.display='none'; }, 200); }
+  parent.addEventListener('mouseenter', open);
+  parent.addEventListener('mouseleave', close);
+  dropdown.addEventListener('mouseenter', open);
+  dropdown.addEventListener('mouseleave', close);
+  trigger.addEventListener('click', function(e){
+    e.preventDefault();
+    dropdown.style.display === 'grid' ? close() : open();
+  });
+  document.addEventListener('click', function(e){
+    if(!parent.contains(e.target)){ clearTimeout(closeTimer); dropdown.style.display='none'; }
+  });
+})();
+</script>
 </body>
 </html>
