@@ -183,6 +183,7 @@ img{max-width:100%;display:block;height:auto}
   background:rgba(0,0,0,0.12);
   z-index:1;
 }
+/* Homepage hero: centered column */
 .hero-inner{
   position:relative;
   z-index:2;
@@ -191,6 +192,21 @@ img{max-width:100%;display:block;height:auto}
   align-items:center;
   gap:20px;
   padding:60px 5%;
+  max-width:1200px;
+  margin:0 auto;
+  width:100%;
+}
+/* Product page heroes: text LEFT, images RIGHT in 2x2 grid */
+.hero-inner:has(.hero-imgs){
+  flex-direction:row;
+  align-items:center;
+  text-align:left;
+  gap:48px;
+  padding:50px 5%;
+}
+.hero-inner:has(.hero-imgs) > div:first-child{
+  flex:1;
+  min-width:0;
 }
 .hero-logo{
   width:200px;
@@ -247,10 +263,56 @@ img{max-width:100%;display:block;height:auto}
 .btn-outline-w:hover{background:rgba(255,255,255,.15)!important;color:#fff!important;transform:translateY(-1px)}
 a.btn-white,a.btn-white:visited{color:#0a2540!important}
 a.btn-outline-w,a.btn-outline-w:visited{color:#fff!important}
-/* Hero images — no stretching */
-.hero-imgs{width:100%;margin-top:16px}
-.hero-imgs img{width:100%;height:auto;object-fit:contain;max-height:320px;border-radius:8px}
-@media(max-width:768px){.hero{min-height:auto}.hero-imgs img{max-height:240px}}
+/* Hero images — 2x2 grid on right side */
+.hero-imgs{
+  flex:0 0 44%;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+.hero-imgs img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:contain;
+  background:rgba(255,255,255,.08);
+  border-radius:8px;
+}
+@media(max-width:900px){
+  .hero-inner:has(.hero-imgs){flex-direction:column;text-align:center}
+  .hero-imgs{flex:none;width:100%;grid-template-columns:1fr 1fr 1fr;max-width:500px}
+}
+@media(max-width:600px){
+  .hero{min-height:auto}
+  .hero-imgs{grid-template-columns:1fr 1fr}
+  .hero-imgs img{aspect-ratio:1/1}
+}
+/* ── BUTTONS (definitive) ── */
+a.btn-white,a.btn-white:link,a.btn-white:visited,
+button.btn-white,span.btn-white{
+  display:inline-block!important;
+  background:#ffffff!important;
+  color:#1a3a1a!important;
+  padding:12px 28px!important;
+  border-radius:6px!important;
+  font-weight:700!important;
+  font-size:.92rem!important;
+  border:none!important;
+  text-decoration:none!important;
+  cursor:pointer;
+}
+a.btn-outline-w,a.btn-outline-w:link,a.btn-outline-w:visited,
+button.btn-outline-w{
+  display:inline-block!important;
+  background:transparent!important;
+  color:#ffffff!important;
+  padding:12px 28px!important;
+  border-radius:6px!important;
+  font-weight:700!important;
+  font-size:.92rem!important;
+  border:2px solid rgba(255,255,255,.85)!important;
+  text-decoration:none!important;
+  cursor:pointer;
+}
 
 /* ── WHY ELIPACKO ── */
 .why-section{
