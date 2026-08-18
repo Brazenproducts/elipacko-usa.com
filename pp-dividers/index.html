@@ -232,9 +232,9 @@ img{max-width:100%!important;height:auto}
 /* ── CANONICAL TYPOGRAPHY (override all per-page variations) ── */
 body{font-family:'Inter',sans-serif!important;font-size:16px!important;color:#1a2332!important;line-height:1.6!important}
 p{font-size:.95rem!important;line-height:1.82!important;color:#374151!important;margin-bottom:14px!important}
-h1{font-size:clamp(1.6rem,4vw,2.8rem)!important;font-weight:800!important;color:#0a2540!important;line-height:1.15!important}
-h2{font-size:clamp(1.3rem,2.8vw,2rem)!important;font-weight:800!important;color:#0a2540!important;margin-bottom:14px!important;scroll-margin-top:76px}
-h3{font-size:1.05rem!important;font-weight:700!important;color:#0a2540!important;margin:20px 0 8px!important}
+h1{font-size:clamp(1.6rem,4vw,2.8rem)!important;font-weight:800!important;color:#1a1a1a;line-height:1.15!important}
+h2{font-size:clamp(1.3rem,2.8vw,2rem)!important;font-weight:800!important;color:#1a1a1a;margin-bottom:14px!important;scroll-margin-top:76px}
+h3{font-size:1.05rem!important;font-weight:700!important;color:#1a1a1a;margin:20px 0 8px!important}
 h4{font-size:.95rem!important;font-weight:700!important;color:#0a2540!important}
 li{font-size:.95rem!important;color:#374151!important;line-height:1.75!important;margin-bottom:4px}
 section{padding:44px 5%!important}
@@ -299,6 +299,11 @@ h2:not(.hero h2):not(.hero-inner h2){color:var(--text-dark,#1a1a1a)!important}
 h3:not(.hero h3){color:var(--text-dark,#1a1a1a)!important}
 h4:not(.hero h4){color:var(--text-dark,#1a1a1a)!important}
 
+
+/* HERO TEXT — white, max specificity */
+.hero *,.hero-inner *{color:#fff!important}
+.hero p,.hero-sub,.hero-inner p{color:rgba(255,255,255,.88)!important}
+.hero a.btn-white,.hero a.btn-outline-w{color:#fff!important}
 </style>
 </head>
 
