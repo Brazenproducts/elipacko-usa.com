@@ -226,45 +226,6 @@ strong{color:#1a2332!important}
     <h2>PP Corrugated Shipping Boxes — Applications by Industry</h2>
     <div class="card-grid">
       <div class="card"><h3>🥬 Fresh Produce</h3><p>Wax-free PP shipping boxes for lettuce, berries, citrus, and stone fruit. 100% waterproof — no wax coating needed. Stackable 8–10 high on GMA pallet. FDA food-safe, USDA accepted. Return via backhaul — same truck that delivered.</p></div>
-      <div class="card"><h3>🐟 Seafood &amp; Fish</h3><p>White PP boxes for fresh and chilled seafood. Withstand ice melt, brine, and condensation without delamination or box failure. Easy hose-down sanitization between uses. Cold chain rated to −20°F.</p></div>
-      <div class="card"><h3>🍗 Meat &amp; Poultry</h3><p>White PP shipping boxes for primal cuts, portion cuts, and further processed protein. Rated to 180°F hot washdown. HACCP color-coding available by species or product type.</p></div>
-      <div class="card"><h3>💊 Pharmaceutical</h3><p>Clean, smooth-interior PP boxes for drug product shipping. Non-porous, no off-gassing, validated-cleanable. Anti-static ESD grade for medical electronics and device shipping.</p></div>
       <div class="card">
-</section>
-</main>
-<script>
-// Hamburger toggle
-(function(){
-  var btn = document.getElementById('hamburgerBtn');
-  var menu = document.getElementById('mobileMenu');
-  if(btn && menu){
-    btn.addEventListener('click', function(){
-      menu.classList.toggle('open');
-    });
-  }
-})();
-
-// Products dropdown — JS only, 200ms grace period
-(function(){
-  var parent = document.querySelector('.nav-has-dropdown');
-  var dropdown = document.querySelector('.nav-dropdown');
-  var trigger = document.querySelector('.nav-dropdown-trigger');
-  if(!parent || !dropdown || !trigger) return;
-  var closeTimer;
-  function open(){ clearTimeout(closeTimer); dropdown.style.display='grid'; }
-  function close(){ closeTimer = setTimeout(function(){ dropdown.style.display='none'; }, 200); }
-  parent.addEventListener('mouseenter', open);
-  parent.addEventListener('mouseleave', close);
-  dropdown.addEventListener('mouseenter', open);
-  dropdown.addEventListener('mouseleave', close);
-  trigger.addEventListener('click', function(e){
-    e.preventDefault();
-    dropdown.style.display === 'grid' ? close() : open();
-  });
-  document.addEventListener('click', function(e){
-    if(!parent.contains(e.target)){ clearTimeout(closeTimer); dropdown.style.display='none'; }
-  });
-})();
-</script>
-</body>
+</main></div></body>
 </html>

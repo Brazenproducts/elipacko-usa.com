@@ -243,60 +243,6 @@ strong{color:#1a2332!important}
 <section style="background:#fff" id="pp-vs-stainless">
   <div class="section-inner">
     <div class="label">Material Comparison</div>
-    <h2>PP vs Stainless Steel vs HDPE — Full Comparison</h2>
-    <p>Buyers often consider three materials for meat processing containers: polypropylene (PP), high-density polyethylene (HDPE), and stainless steel. Each has a genuine use case. Here's where PP wins, where it doesn't, and why it's the right choice for most high-volume processing applications.</p>
-
-    <table class="compare-table">
-      <tr><th>Property</th><th>PP Copolymer</th><th>HDPE</th><th>Stainless Steel</th></tr>
-      <tr><td><strong>Blast-freeze rating</strong></td><td class="yes">−20°F ✓</td><td class="yes">−40°F ✓</td><td class="yes">Any temp ✓</td></tr>
-      <tr><td><strong>Hot washdown (180°F)</strong></td><td class="yes">Yes ✓</td><td class="maybe">110°F max ⚠</td><td class="yes">Yes ✓</td></tr>
-      <tr><td><strong>Chemical resistance</strong></td><td class="yes">Excellent ✓</td><td class="yes">Good ✓</td><td class="maybe">Pitting with chlorine ⚠</td></tr>
-      <tr><td><strong>Weight (30-gal)</strong></td><td class="yes">~8 lbs ✓</td><td class="yes">~10 lbs ✓</td><td class="no">~40 lbs ✗</td></tr>
-      <tr><td><strong>Stackable full</strong></td><td class="yes">Yes ✓</td><td class="yes">Yes ✓</td><td class="maybe">Depends on design ⚠</td></tr>
-      <tr><td><strong>Nestable empty</strong></td><td class="yes">3:1 ratio ✓</td><td class="yes">Yes ✓</td><td class="no">Usually not ✗</td></tr>
-      <tr><td><strong>HACCP color-coding</strong></td><td class="yes">5 colors ✓</td><td class="yes">Available ✓</td><td class="no">Not practical ✗</td></tr>
-      <tr><td><strong>Cost per unit</strong></td><td class="yes">Low ✓</td><td class="yes">Low ✓</td><td class="no">High ✗</td></tr>
-      <tr><td><strong>Dent/crack on impact</strong></td><td class="yes">Flex, no dent ✓</td><td class="yes">Flex ✓</td><td class="no">Dents permanently ✗</td></tr>
-      <tr><td><strong>Service life</strong></td><td class="yes">5–10 years ✓</td><td class="yes">5–8 years ✓</td><td class="yes">10–20 years ✓</td></tr>
-      <tr><td><strong>FDA 21 CFR food grade</strong></td><td class="yes">Yes ✓</td><td class="yes">Yes ✓</td><td class="yes">Yes ✓</td></tr>
-    </table>
-
     
-</section>
-</main>
-<script>
-// Hamburger toggle
-(function(){
-  var btn = document.getElementById('hamburgerBtn');
-  var menu = document.getElementById('mobileMenu');
-  if(btn && menu){
-    btn.addEventListener('click', function(){
-      menu.classList.toggle('open');
-    });
-  }
-})();
-
-// Products dropdown — JS only, 200ms grace period
-(function(){
-  var parent = document.querySelector('.nav-has-dropdown');
-  var dropdown = document.querySelector('.nav-dropdown');
-  var trigger = document.querySelector('.nav-dropdown-trigger');
-  if(!parent || !dropdown || !trigger) return;
-  var closeTimer;
-  function open(){ clearTimeout(closeTimer); dropdown.style.display='grid'; }
-  function close(){ closeTimer = setTimeout(function(){ dropdown.style.display='none'; }, 200); }
-  parent.addEventListener('mouseenter', open);
-  parent.addEventListener('mouseleave', close);
-  dropdown.addEventListener('mouseenter', open);
-  dropdown.addEventListener('mouseleave', close);
-  trigger.addEventListener('click', function(e){
-    e.preventDefault();
-    dropdown.style.display === 'grid' ? close() : open();
-  });
-  document.addEventListener('click', function(e){
-    if(!parent.contains(e.target)){ clearTimeout(closeTimer); dropdown.style.display='none'; }
-  });
-})();
-</script>
-</body>
+</main></div></body>
 </html>
