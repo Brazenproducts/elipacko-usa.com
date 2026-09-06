@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Redirecting... | Elipacko</title>
+<script>
+(function() {
+  var path = window.location.pathname.replace(/\/+$/, '');
+  var map = {
+    '/contact-us': '/contact/',
+    '/why-elipacko': '/company/',
+    '/industries': '/products/',
+    '/about-us': '/company/',
+    '/about': '/company/',
+    '/shop': '/products/',
+    '/blog': '/',
+    '/news': '/',
+    '/product-category/agriculture': '/agriculture-packaging/',
+    '/product-category/seafood': '/seafood-packaging/',
+    '/product-category/cold-chain': '/cold-chain-packaging/',
+    '/product-category/cold-chain-packaging': '/cold-chain-packaging/',
+    '/product-category/meat': '/pp-meat-lugs/',
+    '/product-category/meat-lugs': '/pp-meat-lugs/',
+    '/product-category/poultry': '/pp-poultry-boxes/',
+    '/product-category/poultry-boxes': '/pp-poultry-boxes/',
+    '/product-category/custom-pp-corrugated-sheets': '/custom-corrugated-plastic-sheets/',
+    '/product-category/custom-display-stands': '/products/',
+    '/product-category/storage': '/storage-moving-boxes/',
+    '/product-category/shipping': '/shipping-boxes/',
+    '/product-category/boxes': '/pp-corrugated-boxes/',
+    '/product-category/corrugated-boxes': '/pp-corrugated-boxes/',
+    '/product-category/pallets': '/pp-pallets/',
+    '/product-category/gaylord': '/pp-gaylord-boxes/',
+    '/product-category/gaylord-boxes': '/pp-gaylord-boxes/',
+    '/product-category/trays': '/pp-trays/',
+    '/product-category/dividers': '/pp-dividers/',
+    '/product-category/containers': '/pp-containers/',
+    '/product-category/turnover-boxes': '/pp-turnover-boxes/',
+    '/product-category/voting': '/pp-voting-booths/',
+    '/product-category/ballot': '/pp-ballot-boxes/',
+    '/pp-corrugated-boxes-manufacturer': '/pp-corrugated-boxes/',
+    '/corrugated-plastic-boxes': '/pp-corrugated-boxes/',
+    '/corrugated-plastic-sheets': '/pp-corrugated-sheets/',
+    '/plastic-gaylord-boxes': '/pp-gaylord-boxes/',
+    '/plastic-pallets': '/pp-pallets/',
+    '/request-a-quote': '/request-quote/',
+    '/get-quote': '/request-quote/',
+    '/quote': '/request-quote/',
+  };
+
+  // Exact match
+  if (map[path]) {
+    window.location.replace(map[path]);
+    return;
+  }
+
+  // Prefix matches
+  if (path.startsWith('/product-category/')) { window.location.replace('/products/'); return; }
+  if (path.startsWith('/product/')) { window.location.replace('/products/'); return; }
+  if (path.startsWith('/category/')) { window.location.replace('/'); return; }
+  if (path.startsWith('/tag/')) { window.location.replace('/'); return; }
+  if (path.startsWith('/author/')) { window.location.replace('/'); return; }
+  if (path.startsWith('/page/')) { window.location.replace('/'); return; }
+  if (/^\/20\d\d\//.test(path)) { window.location.replace('/'); return; }
+  if (path.startsWith('/wp-')) { /* real 404 */ return; }
+
+  // Fall through to 404 UI
+  document.getElementById('content').style.display='block';
+})();
+</script>
+</head>
+<body>
+<div id="content" style="display:none;font-family:Arial,sans-serif;max-width:600px;margin:80px auto;text-align:center;padding:20px;">
+  <img src="/index.html" style="display:none" onerror="">
+  <h1 style="color:#2d7a3a;">Page Not Found</h1>
+  <p style="color:#555;font-size:18px;">The page you're looking for has moved or doesn't exist.</p>
+  <a href="/" style="display:inline-block;margin:10px;padding:12px 24px;background:#2d7a3a;color:#fff;text-decoration:none;border-radius:4px;">Homepage</a>
+  <a href="/products/" style="display:inline-block;margin:10px;padding:12px 24px;background:#2d7a3a;color:#fff;text-decoration:none;border-radius:4px;">All Products</a>
+  <a href="/contact/" style="display:inline-block;margin:10px;padding:12px 24px;background:#2d7a3a;color:#fff;text-decoration:none;border-radius:4px;">Contact Us</a>
+</div>
+</body>
+</html>
