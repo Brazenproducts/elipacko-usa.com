@@ -11,12 +11,38 @@
 <link rel="stylesheet" href="../main.css">
 <style>
 td,th{word-break:break-word;min-width:50px}
-
-  
-
 li{font-size:.95rem!important;color:#374151!important;line-height:1.75!important;margin-bottom:4px}
 section{padding:44px 5%!important}
 strong{color:#1a2332!important}
+
+/* ── QUOTE FORM LAYOUT ── */
+.quote-wrap{max-width:1180px;margin:0 auto;padding:48px 5% 24px;display:grid;grid-template-columns:1.3fr .9fr;gap:40px;align-items:start}
+@media(max-width:860px){.quote-wrap{grid-template-columns:1fr;gap:28px;padding:32px 5% 16px}}
+.qform-card{background:#fff;border:1.5px solid #e2e8f0;border-radius:16px;padding:32px;box-shadow:0 8px 30px rgba(0,0,0,.06)}
+.qform-card h2{font-size:1.5rem;font-weight:800;color:#14532d;margin:0 0 6px}
+.qform-card p.qsub{color:#64748b;font-size:.95rem;margin:0 0 22px}
+.qrow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:520px){.qrow{grid-template-columns:1fr}}
+.qgroup{display:flex;flex-direction:column;margin-bottom:16px}
+.qgroup.full{grid-column:1/-1}
+.qgroup label{font-size:.85rem;font-weight:700;color:#1a2332;margin-bottom:6px}
+.qgroup label .req{color:#dc2626}
+.qgroup input,.qgroup select,.qgroup textarea{font-family:inherit;font-size:.95rem;padding:12px 14px;border:1.5px solid #cbd5e1;border-radius:9px;background:#f8fafc;transition:border-color .15s,background .15s}
+.qgroup input:focus,.qgroup select:focus,.qgroup textarea:focus{outline:none;border-color:#16a34a;background:#fff}
+.qgroup textarea{min-height:120px;resize:vertical}
+.qsubmit{width:100%;background:#16a34a;color:#fff;border:none;border-radius:10px;padding:16px;font-family:inherit;font-size:1.05rem;font-weight:800;cursor:pointer;transition:background .2s,transform .15s;margin-top:4px}
+.qsubmit:hover{background:#14532d;transform:translateY(-1px)}
+.qform-note{text-align:center;font-size:.8rem;color:#94a3b8;margin-top:12px}
+/* side rail */
+.qside h3{font-size:1.05rem;font-weight:800;color:#14532d;margin:0 0 12px}
+.qside-box{background:#f0fdf4;border:1.5px solid #bbf7d0;border-radius:14px;padding:22px 24px;margin-bottom:18px}
+.qside-box ul{list-style:none;margin:0;padding:0}
+.qside-box li{position:relative;padding-left:22px;margin-bottom:9px;font-size:.92rem;color:#374151;line-height:1.5}
+.qside-box li::before{content:"✓";position:absolute;left:0;color:#16a34a;font-weight:800}
+.qside-alt{display:flex;flex-direction:column;gap:10px}
+.qside-alt a{display:flex;align-items:center;gap:10px;background:#fff;border:1.5px solid #e2e8f0;border-radius:10px;padding:13px 16px;text-decoration:none;color:#1a2332;font-weight:600;font-size:.92rem;transition:border-color .15s,box-shadow .15s}
+.qside-alt a:hover{border-color:#16a34a;box-shadow:0 4px 14px rgba(22,163,74,.12)}
+.qside-alt .qa-ico{font-size:1.3rem}
 </style>
 <meta property="og:image" content="https://brazenproducts.github.io/elipacko-assets/orange-box.jpg">
 <meta property="og:site_name" content="Elipacko">
@@ -138,7 +164,7 @@ strong{color:#1a2332!important}
 </nav>
 
 <!-- USA BANNER -->
-<div class="usa-banner"><div class="usa-banner-line1">🇺🇸 <strong>USA Manufacturing Coming Soon</strong> 🇺🇸</div><div class="usa-banner-line2">Zero duties &nbsp;·&nbsp; Faster delivery &nbsp;·&nbsp; Domestic production underway</div></div>
+<div class="usa-banner"><div class="usa-banner-line1"><strong>USA Manufacturing Coming Soon</strong></div><div class="usa-banner-line2">Zero duties &nbsp;·&nbsp; Faster delivery &nbsp;·&nbsp; Domestic production underway</div></div>
 
 <section class="hero hero-product" style="background:linear-gradient(135deg,#14532d,#16a34a);min-height:280px">
   <div class="hero-inner" style="text-align:center;flex-direction:column">
@@ -147,55 +173,75 @@ strong{color:#1a2332!important}
   </div>
 </section>
 
-<div class="page-body">
+<div class="quote-wrap">
 
-  <div class="info-box">
-    <h2>What to include in your inquiry</h2>
-    <ul class="info-list">
-      <li>Product type (boxes, gaylords, pallets, sheets, etc.)</li>
-      <li>Dimensions (L × W × H in inches or mm)</li>
-      <li>Quantity needed (pieces or containers)</li>
-      <li>Color preference (natural, black, custom)</li>
-      <li>Wall thickness or load requirements</li>
-      <li>Delivery port or US address</li>
-      <li>Target timeline</li>
-      <li>Food-safety or compliance requirements</li>
-    </ul>
+  <!-- THE FORM -->
+  <div class="qform-card">
+    <h2>Get Your Free Quote</h2>
+    <p class="qsub">Fill out the form below. Our sales team responds within 1 business day with pricing and lead times.</p>
+    <form action="https://formsubmit.co/sales@elipacko.com" method="POST">
+      <input type="hidden" name="_subject" value="New Quote Request — Elipacko Website">
+      <input type="hidden" name="_next" value="https://elipacko.com/request-quote/?sent=1">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <div class="qrow">
+        <div class="qgroup"><label>Name <span class="req">*</span></label><input type="text" name="Name" placeholder="Your full name" required></div>
+        <div class="qgroup"><label>Company</label><input type="text" name="Company" placeholder="Company name"></div>
+      </div>
+      <div class="qrow">
+        <div class="qgroup"><label>Email <span class="req">*</span></label><input type="email" name="Email" placeholder="you@company.com" required></div>
+        <div class="qgroup"><label>Phone</label><input type="tel" name="Phone" placeholder="+1 (555) 000-0000"></div>
+      </div>
+      <div class="qrow">
+        <div class="qgroup">
+          <label>Product Interest</label>
+          <select name="Product">
+            <option value="">Select a product…</option>
+            <option>Produce Boxes</option>
+            <option>PP Corrugated Boxes</option>
+            <option>Gaylord Boxes</option>
+            <option>Poultry Boxes</option>
+            <option>Meat Lugs</option>
+            <option>PP Pallets</option>
+            <option>Stretch Film &amp; Pallet Wrap</option>
+            <option>Pallet Covers &amp; Top Sheets</option>
+            <option>Layer Pads</option>
+            <option>Vegetable Twist Ties</option>
+            <option>Produce Box Liners</option>
+            <option>PP Sheets / Dividers</option>
+            <option>Custom / Other</option>
+          </select>
+        </div>
+        <div class="qgroup"><label>Quantity Needed</label><input type="text" name="Quantity" placeholder="e.g. 5,000 pcs or 2 containers"></div>
+      </div>
+      <div class="qgroup full">
+        <label>Details <span class="req">*</span></label>
+        <textarea name="Details" placeholder="Tell us dimensions (L × W × H), color, wall thickness/load, delivery port or US address, timeline, and any food-safety requirements..." required></textarea>
+      </div>
+      <button type="submit" class="qsubmit">Send My Quote Request →</button>
+      <div class="qform-note">We respond within 1 business day · Your info is never shared</div>
+    </form>
   </div>
 
-  <div class="contact-grid">
-    <div class="contact-card">
-      <div class="contact-icon">📧</div>
-      <h3>Email a Quote Request</h3>
-      <p>Send your specs to our sales team. We respond within 1 business day with pricing and lead times.</p>
-      <a href="mailto:info@elipacko.com?subject=Wholesale%20Quote%20Request%20—%20PP%20Corrugated%20Packaging" class="btn-contact">Email info@elipacko.com</a>
+  <!-- SIDE RAIL -->
+  <div class="qside">
+    <h3>Why Buy From Elipacko</h3>
+    <div class="qside-box">
+      <ul>
+        <li>MOQ 500 pcs · one 40HQ container in 3 days</li>
+        <li>FDA 21 CFR 177.1520 — food-contact approved</li>
+        <li>0% anti-dumping duty (Thailand-made)</li>
+        <li>Custom sizes, colors &amp; printing available</li>
+        <li>Door-to-door delivery to US ports &amp; warehouses</li>
+        <li>15+ years manufacturing experience</li>
+      </ul>
     </div>
-    <div class="contact-card">
-      <div class="contact-icon">💬</div>
-      <h3>WhatsApp / WeChat</h3>
-      <p>Fast response via WhatsApp or WeChat. Ideal for photos, samples, and quick spec questions.</p>
-      <a href="https://wa.me/66823217897?text=Hi%20Elipacko%2C%20I%27d%20like%20to%20request%20a%20wholesale%20quote." class="btn-contact" target="_blank" rel="noopener">WhatsApp +66 82 321 7897</a>
+    <h3>Prefer to Message Us Directly?</h3>
+    <div class="qside-alt">
+      <a href="https://wa.me/66823217897?text=Hi%20Elipacko%2C%20I%27d%20like%20to%20request%20a%20wholesale%20quote." target="_blank" rel="noopener"><span class="qa-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="#16a34a"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg></span> WhatsApp +66 82 321 7897</a>
+      <a href="mailto:sales@elipacko.com?subject=Wholesale%20Quote%20Request"><span class="qa-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span> sales@elipacko.com</a>
+      <a href="tel:+19295447864"><span class="qa-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></span> +1-929-544-7864</a>
     </div>
-    <div class="contact-card">
-      <div class="contact-icon">🌐</div>
-      <h3>Official Website</h3>
-      <p>Visit the official Elipacko website for additional contact options and company information.</p>
-      <a href="mailto:info@elipacko.com" class="btn-contact-outline" target="_blank" rel="noopener">Contact Elipacko →</a>
-    </div>
-  </div>
-
-  <div class="info-box">
-    <h2>Quick facts</h2>
-    <ul class="info-list">
-      <li>MOQ: 500 pieces for standard sizes</li>
-      <li>Production: One 40HQ container in 3 days</li>
-      <li>FDA 21 CFR 177.1520 — direct food contact approved</li>
-      <li>0% anti-dumping duty (Thailand-manufactured)</li>
-      <li>USA manufacturing coming soon</li>
-      <li>Custom sizes, colors, and print available</li>
-      <li>Door-to-door delivery to US ports and warehouses</li>
-      <li>15+ years manufacturing experience</li>
-    </ul>
   </div>
 
 </div>

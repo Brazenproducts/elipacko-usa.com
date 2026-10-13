@@ -18,6 +18,25 @@ body{font-family:'Albert Sans',sans-serif;color:var(--text-dark);line-height:1.6
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block;height:auto}
 
+/* ── OBVIOUS CLICKABLE LINKS (site-wide) ── */
+/* Any link inside body text/lists/footer = green, underlined, bold so it's clearly clickable */
+.page-body a:not(.btn-contact):not(.btn-contact-outline):not(.qsubmit),
+.info-box a,
+footer a,
+.quote-wrap a:not(.qsubmit){
+  color:var(--green-primary);
+  text-decoration:underline;
+  text-underline-offset:2px;
+  font-weight:600;
+}
+.page-body a:hover,.info-box a:hover,footer a:hover,.quote-wrap a:not(.qsubmit):hover{
+  color:var(--green-dark);
+  text-decoration:underline;
+}
+/* Make nav links look tappable: always show a subtle green, underline on hover */
+.main-nav-links li a:not(.nav-quote-btn){color:var(--text-dark);font-weight:600}
+.main-nav-links li a:not(.nav-quote-btn):hover{color:var(--green-primary) !important;text-decoration:underline;text-underline-offset:4px}
+
 /* ── TOP INFO BAR ── */
 .top-bar{
   background:var(--green-topbar);
