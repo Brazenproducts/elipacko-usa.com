@@ -151,13 +151,42 @@ img{max-width:100%;display:block;height:auto}
   padding:90px 5%;
 }
 .hero-logo{
-  width:clamp(120px,16vw,190px);
+  width:clamp(150px,19vw,240px);
   height:auto;
   filter:drop-shadow(0 4px 14px rgba(0,0,0,.5));
 }
+.hero-newslogan{
+  font-family:'Urbanist',sans-serif;
+  font-size:clamp(1.15rem,2.4vw,1.75rem);
+  font-weight:800;
+  color:#a9f0c4;
+  letter-spacing:.005em;
+  text-shadow:0 2px 12px rgba(0,0,0,.7);
+  margin:0 0 -6px;
+  max-width:24ch;
+}
+.hero-badges{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin-top:4px;
+}
+.hero-badge{
+  background:rgba(255,255,255,.14);
+  border:1.5px solid rgba(255,255,255,.35);
+  backdrop-filter:blur(4px);
+  color:#fff;
+  font-family:'Urbanist',sans-serif;
+  font-weight:700;
+  font-size:clamp(.85rem,1.5vw,1.05rem);
+  padding:9px 18px;
+  border-radius:999px;
+  text-shadow:0 1px 6px rgba(0,0,0,.6);
+}
 .hero-tagline{
   font-family:'Urbanist',sans-serif;
-  font-size:clamp(2.4rem,5.5vw,4.25rem);
+  font-size:clamp(2.7rem,6vw,4.9rem);
   font-weight:900;
   color:#fff;
   letter-spacing:-.025em;
@@ -659,10 +688,11 @@ footer{
           </div>
         </div>
       </li>
-      <li><a href="products/">0% Duty</a></li>
-      <li><a href="company/">Company</a></li>
+      <li><a href="company/">About Us</a></li>
+      <li><a href="industries-served/">Industries Served</a></li>
+      <li><a href="sustainability/">Sustainability</a></li>
       <li><a href="contact/">Contact</a></li>
-      <li><a href="contact/" class="nav-quote-btn">Request A Quote</a></li>
+      <li><a href="request-quote/" class="nav-quote-btn">Request A Quote</a></li>
     </ul>
     <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open navigation menu">
       <span></span><span></span><span></span>
@@ -703,10 +733,16 @@ footer{
   <div class="hero-overlay"></div>
   <div class="hero-inner">
     <img src="https://mediumturquoise-wildcat-116292.hostingersite.com/wp-content/uploads/2025/10/logo-main.png" alt="Elipacko" class="hero-logo">
+    <div class="hero-newslogan">A Full Range of Produce Packaging Solutions</div>
     <h1 class="hero-tagline">One-Stop Agricultural Packaging Supplier<br><span class="hero-tagline-sub">Direct from Asia &middot; Factory Sale Direct</span></h1>
+    <div class="hero-badges">
+      <span class="hero-badge">🇹🇭 Made In Thailand</span>
+      <span class="hero-badge">🇺🇸 Buy from a USA Local Company</span>
+      <span class="hero-badge">🏭 Ship from Asia's Largest Factory Bases</span>
+    </div>
     <div class="hero-btns">
       <a href="products/" class="hero-btn-primary">Our Products</a>
-      <a href="contact/" class="hero-btn-outline">Contact Us</a>
+      <a href="request-quote/" class="hero-btn-outline">Request a Quote</a>
     </div>
   </div>
 </section>
@@ -724,7 +760,7 @@ footer{
           alt="Made In Thailand"
           class="why-card-icon"
           loading="lazy">
-        <div class="why-card-title">Made In Thailand<br>Zero Tax To USA</div>
+        <div class="why-card-title">Made In Thailand<br>Buy From a USA Local Company</div>
       </div>
 
       <!-- Card 2: Fast Delivery -->
@@ -774,13 +810,13 @@ footer{
 <!-- FULL PRODUCT RANGE -->
 <section class="range-section" id="product-range">
   <div class="range-inner">
-    <h2 class="range-heading">A Full Range of Agricultural Packaging</h2>
-    <p class="range-sub">Beyond PP corrugated boxes, ELIPACKO is your one-stop supplier for produce boxes, bags, pallet packaging, and retail produce packaging &mdash; all factory-direct from Asia.</p>
+    <h2 class="range-heading">A Full Range of Produce Packaging Solutions</h2>
+    <p class="range-sub">Beyond Food Grade Polypropylene Solutions, Elipacko is your one-stop supplier for Produce Boxes, Fruit &amp; Vegetable Bags, Clamshells for Berries, Waterproof Seafood Boxes, Frozen Meat &amp; Poultry Boxes, and OEM Products like Corner Boards &amp; Digital Print Sign Boards.</p>
     <div class="range-cards">
 
       <!-- Produce Boxes -->
       <div class="range-card">
-        <img src="assets/product-range/produce-boxes.jpg" alt="Produce Boxes" class="range-card-img" loading="lazy"
+        <img src="assets/products/homepage/produce-boxes.jpg" alt="Produce Boxes" class="range-card-img" loading="lazy"
           onerror="this.style.display='none'">
         <div class="range-card-body">
           <div class="range-card-title">Produce Boxes</div>
@@ -795,44 +831,74 @@ footer{
 
       <!-- Produce Bags -->
       <div class="range-card">
-        <img src="assets/product-range/produce-bags.jpg" alt="Produce Bags" class="range-card-img" loading="lazy"
+        <img src="assets/products/homepage/produce-bags.jpg" alt="Produce Bags" class="range-card-img" loading="lazy"
           onerror="this.style.display='none'">
         <div class="range-card-body">
           <div class="range-card-title">Produce Bags</div>
           <ul class="range-card-list">
+            <li>Fruit &amp; Vegetable Bags</li>
             <li>LDPE, HDPE &amp; BOPP Bags</li>
-            <li>Zipper Bags</li>
-            <li>Printed Bags</li>
+            <li>Zipper &amp; Printed Bags</li>
           </ul>
           <a href="request-quote/" class="range-card-btn">Request Quote</a>
         </div>
       </div>
 
-      <!-- Pallet Packaging -->
+      <!-- Clamshell -->
       <div class="range-card">
-        <img src="assets/product-range/pallet-packaging.jpg" alt="Pallet Packaging" class="range-card-img" loading="lazy"
+        <img src="assets/products/homepage/clamshell.jpg" alt="Clamshell Packaging" class="range-card-img" loading="lazy"
           onerror="this.style.display='none'">
         <div class="range-card-body">
-          <div class="range-card-title">Pallet Packaging</div>
+          <div class="range-card-title">Clamshell</div>
           <ul class="range-card-list">
-            <li>Stretch Film &amp; Pallet Covers</li>
-            <li>Liners, Corner Boards &amp; Layer Pads</li>
-            <li>Vegetable Twist Ties &amp; Strapping</li>
+            <li>Clamshells for Berries</li>
+            <li>PET Trays &amp; Punnets</li>
+            <li>Vented Produce Containers</li>
           </ul>
           <a href="request-quote/" class="range-card-btn">Request Quote</a>
         </div>
       </div>
 
-      <!-- Retail Produce Packaging -->
+      <!-- Seafood Boxes -->
       <div class="range-card">
-        <img src="assets/product-range/retail-produce.jpg" alt="Retail Produce Packaging" class="range-card-img" loading="lazy"
+        <img src="assets/products/homepage/seafood-boxes.jpg" alt="Seafood Boxes" class="range-card-img" loading="lazy"
           onerror="this.style.display='none'">
         <div class="range-card-body">
-          <div class="range-card-title">Retail Produce Packaging</div>
+          <div class="range-card-title">Seafood Boxes</div>
           <ul class="range-card-list">
-            <li>Clamshells &amp; PET Trays</li>
-            <li>Punnets</li>
-            <li>Absorbent Pads</li>
+            <li>Waterproof Seafood Boxes</li>
+            <li>Insulated Cold-Chain Boxes</li>
+            <li>Leak-Resistant Construction</li>
+          </ul>
+          <a href="request-quote/" class="range-card-btn">Request Quote</a>
+        </div>
+      </div>
+
+      <!-- Poultry Boxes -->
+      <div class="range-card">
+        <img src="assets/products/homepage/poultry-boxes.jpg" alt="Frozen Meat &amp; Poultry Boxes" class="range-card-img" loading="lazy"
+          onerror="this.style.display='none'">
+        <div class="range-card-body">
+          <div class="range-card-title">Poultry Boxes</div>
+          <ul class="range-card-list">
+            <li>Frozen Meat &amp; Poultry Boxes</li>
+            <li>Food-Grade &amp; Washable</li>
+            <li>Cold-Chain Ready</li>
+          </ul>
+          <a href="pp-poultry-boxes/" class="range-card-btn">View Boxes</a>
+        </div>
+      </div>
+
+      <!-- Customized -->
+      <div class="range-card">
+        <img src="assets/products/homepage/customized.jpg" alt="Customized Packaging" class="range-card-img" loading="lazy"
+          onerror="this.style.display='none'">
+        <div class="range-card-body">
+          <div class="range-card-title">Customized</div>
+          <ul class="range-card-list">
+            <li>OEM Corner Boards</li>
+            <li>Digital Print Sign Boards</li>
+            <li>Custom Sizes, Colors &amp; Print</li>
           </ul>
           <a href="request-quote/" class="range-card-btn">Request Quote</a>
         </div>
@@ -970,22 +1036,29 @@ footer{
 <footer>
   <div class="footer-cols">
     <div>
-      <div class="footer-col-head">Email Us</div>
+      <div class="footer-col-head">Contact</div>
       <div class="footer-col-body">
-        <a href="mailto:sales@elipacko.com">sales@elipacko.com</a>
-      </div>
-    </div>
-    <div>
-      <div class="footer-col-head">Location</div>
-      <div class="footer-col-body">
-        65/131 Floor 16, Chamnan Phenjati Business Center,<br>
-        Rama 9 Rd, Huaykwang Bangkok, 10310, Thailand
-      </div>
-    </div>
-    <div>
-      <div class="footer-col-head">Call Us</div>
-      <div class="footer-col-body">
+        <a href="mailto:sales@elipacko.com">sales@elipacko.com</a><br>
         <a href="tel:+19295447864">+1-929-544-7864</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-head">Offices</div>
+      <div class="footer-col-body">
+        <strong>USA Office:</strong><br>
+        1687 Washington Ave, Bronx, NY 10457<br>
+        <strong>Canada Office:</strong> Coming Soon
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-head">Production Bases</div>
+      <div class="footer-col-body">
+        <strong>Thailand:</strong><br>
+        65/131 Floor 16, Chamnan Phenjati Business Center,<br>
+        Rama 9 Rd, Huaykwang, Bangkok 10310<br>
+        <strong>China:</strong><br>
+        No. 668 Dongan Road, Qingxi Town,<br>
+        Dongguan City, Guangdong Province
       </div>
     </div>
   </div>
