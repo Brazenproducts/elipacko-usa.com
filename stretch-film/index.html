@@ -7,6 +7,7 @@
 <meta name="description" content="Wholesale stretch film and pallet wrap from ELIPACKO — hand and machine film, colored and printed options, factory-direct from Asia.">
 <link rel="canonical" href="https://elipacko.com/stretch-film/">
 <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../main.css">
 <style>
 :root{--green-primary:#227e3a;--green-dark:#1a6030;--green-light:#f0fdf4;--text-dark:#1a1a1a;--border:#e2e8f0}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -39,15 +40,126 @@ footer{background:#0f2a1a;color:#cfe8d8;padding:40px 5%;text-align:center;font-s
 </style>
 </head>
 <body>
-<div class="topbar"><span>📞 +1-929-544-7864 &nbsp; ✉️ sales@elipacko.com</span><span>One-Stop Agricultural Packaging Supplier · Direct from Asia</span></div>
-<nav class="nav">
-  <a href="../" class="nav-logo">ELIPACKO</a>
-  <div class="nav-links">
-    <a href="../products/">All Products</a>
-    <a href="../#product-range">Product Range</a>
-    <a href="../contact/">Contact</a>
-    <a href="../request-quote/" class="nav-cta">Request a Quote</a>
+<!-- TOP INFO BAR -->
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="top-bar-left">
+      <a href="tel:+19295447864">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        +1-929-544-7864
+      </a>
+      <a href="mailto:sales@elipacko.com">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        sales@elipacko.com
+      </a>
+    </div>
+    <div class="top-bar-right">
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/elipacko" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+      </a>
+      <!-- X / Twitter -->
+      <a href="https://x.com/elipacko" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="X (Twitter)">
+        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/elipacko" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+      <!-- YouTube -->
+      <a href="https://www.youtube.com/@elipacko" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="YouTube">
+        <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+      </a>
+      <!-- Pinterest -->
+      <a href="https://www.pinterest.com/elipacko" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="Pinterest">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.598-.299-1.482c0-1.388.806-2.428 1.808-2.428.853 0 1.267.641 1.267 1.408 0 .858-.546 2.141-.828 3.329-.236.995.499 1.806 1.476 1.806 1.772 0 2.973-2.283 2.973-4.988 0-2.064-1.373-3.578-3.833-3.578-2.79 0-4.522 2.086-4.522 4.406 0 .797.235 1.36.6 1.788a.24.24 0 01.055.23c-.061.253-.197.795-.224.907-.035.146-.145.197-.334.119-1.249-.514-1.83-1.891-1.83-3.437 0-2.552 2.149-5.623 6.41-5.623 3.444 0 5.717 2.498 5.717 5.183 0 3.559-1.965 6.188-4.867 6.188-.973 0-1.889-.527-2.203-1.118l-.599 2.308c-.218.84-.807 1.888-1.201 2.525.905.279 1.865.43 2.861.43 5.522 0 10-4.478 10-10S17.522 2 12 2z"/></svg>
+      </a>
+    </div>
   </div>
+</div>
+
+<!-- MAIN NAV -->
+<nav class="main-nav">
+  <div class="main-nav-inner">
+    <a href=".././" aria-label="Elipacko Home"><span class="nav-logo-wrap"><img src="https://mediumturquoise-wildcat-116292.hostingersite.com/wp-content/uploads/2025/10/logo-main.png" alt="Elipacko Logo" class="nav-logo-img"><span class="nav-logo-name">ELIPACKO</span></span></a>
+    <ul class="main-nav-links">
+      <li class="nav-has-dropdown">
+        <a href="#" class="nav-dropdown-trigger">Products <span class="nav-caret">▾</span></a>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-col">
+            <div class="nav-dropdown-cat">Produce Boxes</div>
+            <a href="../agriculture-packaging/">Produce Boxes</a>
+            <a href="../pp-corrugated-boxes/">PP Corrugated Boxes</a>
+            <a href="../pp-trays/">PP Trays</a>
+            <a href="../storage-moving-boxes/">Storage &amp; Moving Boxes</a>
+            <div class="nav-dropdown-cat">Produce Bags</div>
+            <a href="../request-quote/">Fruit &amp; Vegetable Bags</a>
+            <div class="nav-dropdown-cat">Clamshell</div>
+            <a href="../request-quote/">Clamshells &amp; Punnets</a>
+          </div>
+          <div class="nav-dropdown-col">
+            <div class="nav-dropdown-cat">Seafood Boxes</div>
+            <a href="../seafood-packaging/">Seafood Boxes</a>
+            <a href="../pp-meat-lugs/">Meat Lugs</a>
+            <a href="../cold-chain-packaging/">Cold Chain Packaging</a>
+            <div class="nav-dropdown-cat">Poultry Boxes</div>
+            <a href="../pp-poultry-boxes/">Poultry Boxes</a>
+          </div>
+          <div class="nav-dropdown-col">
+            <div class="nav-dropdown-cat">Customized</div>
+            <a href="../pp-gaylord-boxes/">Gaylord Boxes</a>
+            <a href="../pp-turnover-boxes/">Turnover Boxes</a>
+            <a href="../pp-containers/">Containers</a>
+            <a href="../pp-ballot-boxes/">Ballot Boxes</a>
+            <a href="../pp-post-office-boxes/">Post Office Boxes</a>
+            <a href="../pp-corrugated-sheets/">PP Sheets</a>
+            <a href="../pp-dividers/">PP Dividers</a>
+            <a href="../pp-divider-boards/">PP Divider Boards</a>
+            <a href="../pp-pallets/">PP Pallets</a>
+            <a href="../stretch-film/">Stretch Film</a>
+            <a href="../pallet-covers/">Pallet Covers</a>
+            <a href="../layer-pads/">Layer Pads</a>
+            <a href="../produce-liners/">Produce Liners</a>
+            <a href="../vegetable-twist-ties/">Vegetable Twist Ties</a>
+            <a href="../aluminum-reinforced-pp-box/">Aluminum Reinforced PP Box</a>
+            <a href="../custom-corrugated-plastic-sheets/">Custom Corrugated Sheets</a>
+            <a href="../custom-pp-packaging-box/">Custom Packaging Box</a>
+            <a href="../velcro-closure-pp-box/">Velcro Closure PP Box</a>
+            <a href="../steel-stillage-pallet-cage/">Steel Stillage &amp; Pallet Cage</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="../products/">All Products</a></li>
+      <li><a href="../company/">About Us</a></li>
+      <li><a href="../industries-served/">Industries Served</a></li>
+      <li><a href="../sustainability/">Sustainability</a></li>
+      <li><a href="../contact/">Contact</a></li>
+      <li><a href="../request-quote/" class="nav-quote-btn">Request A Quote</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li class="mobile-cat-label">— Products —</li>
+      <li><a href="../agriculture-packaging/">Produce Boxes</a></li>
+      <li><a href="../request-quote/">Produce Bags</a></li>
+      <li><a href="../request-quote/">Clamshell</a></li>
+      <li><a href="../seafood-packaging/">Seafood Boxes</a></li>
+      <li><a href="../pp-poultry-boxes/">Poultry Boxes</a></li>
+      <li><a href="../products/">Customized &amp; Full Range</a></li>
+      <li class="mobile-cat-label">— Company —</li>
+      <li><a href="../products/">All Products</a></li>
+      <li><a href="../company/">About Us</a></li>
+      <li><a href="../industries-served/">Industries Served</a></li>
+      <li><a href="../sustainability/">Sustainability</a></li>
+      <li><a href="../contact/">Contact</a></li>
+      <li><a href="../request-quote/" style="color:var(--green-primary);font-weight:700">Request A Quote</a></li>
+    </ul>
+  </div>
+
 </nav>
 <div class="phero">
   <h1>Stretch Film &amp; Pallet Wrap</h1>
@@ -72,5 +184,40 @@ footer{background:#0f2a1a;color:#cfe8d8;padding:40px 5%;text-align:center;font-s
   <a href="../request-quote/" class="cta-btn">Request a Quote</a>
 </div>
 <footer>&copy;2025 ELIPACKO &middot; One-Stop Agricultural Packaging Supplier &middot; Direct from Asia<br>65/131 Floor 16, Chamnan Phenjati Business Center, Rama 9 Rd, Huaykwang Bangkok, 10310, Thailand</footer>
+<script>
+// Hamburger toggle
+(function(){
+  var btn = document.getElementById('hamburgerBtn');
+  var menu = document.getElementById('mobileMenu');
+  if(btn && menu){
+    btn.addEventListener('click', function(){
+      menu.classList.toggle('open');
+    });
+  }
+})();
+
+// Products dropdown — JS only, 200ms grace period
+(function(){
+  var parent = document.querySelector('.nav-has-dropdown');
+  var dropdown = document.querySelector('.nav-dropdown');
+  var trigger = document.querySelector('.nav-dropdown-trigger');
+  if(!parent || !dropdown || !trigger) return;
+  var closeTimer;
+  function open(){ clearTimeout(closeTimer); dropdown.style.display='grid'; }
+  function close(){ closeTimer = setTimeout(function(){ dropdown.style.display='none'; }, 200); }
+  parent.addEventListener('mouseenter', open);
+  parent.addEventListener('mouseleave', close);
+  dropdown.addEventListener('mouseenter', open);
+  dropdown.addEventListener('mouseleave', close);
+  trigger.addEventListener('click', function(e){
+    e.preventDefault();
+    dropdown.style.display === 'grid' ? close() : open();
+  });
+  document.addEventListener('click', function(e){
+    if(!parent.contains(e.target)){ clearTimeout(closeTimer); dropdown.style.display='none'; }
+  });
+})();
+</script>
+</script>
 </body>
 </html>
