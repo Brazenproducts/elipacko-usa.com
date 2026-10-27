@@ -626,3 +626,7 @@ footer{
   .nav-logo-img{width:44px;height:44px}
 }
 .mobile-cat-label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#027a53;padding:10px 0 2px}
+
+/* FORCE dropdown to work on hover WITHOUT JS (fixes dead tabs) */
+.nav-has-dropdown:hover .nav-dropdown{display:grid !important}
+.nav-dropdown{grid-template-columns:1fr 1fr 1fr}
